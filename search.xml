@@ -25,15 +25,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2021/06/16/test/</url>
-    <content><![CDATA[<p>qwq</p>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>qwq</title>
     <url>/2021/06/16/qwq/</url>
     <content><![CDATA[<p>qwq</p>
@@ -41,6 +32,15 @@
       <categories>
         <category>test</category>
       </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2021/06/16/test/</url>
+    <content><![CDATA[<p>qwq</p>
+]]></content>
       <tags>
         <tag>test</tag>
       </tags>
