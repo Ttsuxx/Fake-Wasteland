@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2616195 */
-  src: url('//at.alicdn.com/t/font_2616195_z5pbsqalfw.woff2?t=1623909074640') format('woff2'),
-       url('//at.alicdn.com/t/font_2616195_z5pbsqalfw.woff?t=1623909074640') format('woff'),
-       url('//at.alicdn.com/t/font_2616195_z5pbsqalfw.ttf?t=1623909074640') format('truetype');
+  src: url('//at.alicdn.com/t/font_2616195_he2d7n41df6.woff2?t=1623946527985') format('woff2'),
+       url('//at.alicdn.com/t/font_2616195_he2d7n41df6.woff?t=1623946527985') format('woff'),
+       url('//at.alicdn.com/t/font_2616195_he2d7n41df6.ttf?t=1623946527985') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wangyuanjing:before {
+  content: "\e6db";
 }
 
 .icon-github:before {
