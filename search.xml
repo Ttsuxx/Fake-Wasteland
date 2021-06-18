@@ -39,8 +39,18 @@
   <entry>
     <title>test</title>
     <url>/2021/06/16/test/</url>
-    <content><![CDATA[<p>qwq</p>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="ba11e87886267e121a44eb6616d60906c77f9bcef031c03a75e0800fa753782d">a81b18b76326989181327cf554748c52d97b0fca63c3a5637473419e2b12e6c80ecb50b43f90f047533a7aeb2218d6ff</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>test</tag>
       </tags>
