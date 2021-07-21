@@ -1,147 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello, world! &amp;弯路日志</title>
-    <url>/2021/06/18/Hello,%20world!%20&amp;%E5%BC%AF%E8%B7%AF%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>Hello, world!  t酱的博客又有啦，诶嘿ww</p>
-<p>这篇以后不出意外的话肯定是绝对的黑历史。人嘛，总是要从无知到有知再到更有知的（雾）。虽然这几天实际上也没有学到什么本质的东西，但至少拿到了一点皮毛上的尖尖吧？（心虚）</p>
-<p>三四天断断续续终于差不多配置完了（瘫。之后大概还会改一下subtitle、description、配色什么的（？ 看心情。不想弄得太花里胡哨，文章封面暂时也去掉。</p>
-<p>因为我真的是一点点基础都没有，大佬们很多默认的大家都会的东西提都没提，我就因此在很多很多“不可能有问题”的地方卡住了qwq 甚至还绝望哭了两三次（我真没用啊QAQ</p>
-<p>查了巨多的资料，也请教了大佬，目前就是这个样子了。（感觉有点经验的最多3h就好了呜呜呜。</p>
-<p>写一个这个主要用作自己备忘，因为大概也没有人会垃圾到需要参考到我的这个（（</p>
-<p>感谢<a href="http://bubbleioa.top/">ioa姐</a>的大力援助orz</p>
-<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><h3 id="静态和动态博客的选择"><a href="#静态和动态博客的选择" class="headerlink" title="静态和动态博客的选择"></a>静态和动态博客的选择</h3><p><a href="https://www.html.cn/qa/frontend/20461.html">静态网页和动态网页的区别</a></p>
-<p>两年前折腾过动态的，想用wordpress，没有服务器就在本机上各种操作，什么nginx，什么apache之类的东西qwq 之后是11某大佬一路帮助（</p>
-<p> 个人体感是动态前期部署和后期维护麻烦，使用中非常方便（呜呜呜真的好方便）。需要服务器。</p>
-<p>静态的托管到Github Pages上可以不用服务器，维护方便（？）比动态的安全。但是主题设置相关麻烦（一劳永逸？）。</p>
-<p>基于我为零的技术基础以及低需求，当然是选择静态！</p>
-<p>或许以后（很久以后）会试试看放自己做的视频上来？（多分。</p>
-<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p><a href="https://www.zhihu.com/question/20513729/answer/96332435">域名是如何运行的</a></p>
-<h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4><p>ID 是Ttsuxx，那肯定是要ttsuxx开头。</p>
-<p>选什么后缀好呢？</p>
-<p>为什么选择cc？</p>
-<ol>
-<li>和tt、xx一样是两个字母重叠，非常整齐！w</li>
-<li>只有两个字母，够短，好记w</li>
-</ol>
-<h4 id="注册商"><a href="#注册商" class="headerlink" title="注册商"></a>注册商</h4><p>这个东西我纠结了半天（</p>
-<p>啊啊啊啊好像是在国外网站买会比较好一点，嗯….那还是就在godaddy上买好了。</p>
-<p>诶诶诶不是说godaddy可以用支付宝的吗？! 为什么没有支付宝的选项QAQ</p>
-<p>诶，也有人在喷godaddy！国内的注册商也是被喷到不行！</p>
-<p>哇！为什么国内注册商这么便宜！五年只要100+！</p>
-<p>国内好像还是麻烦得很诶，还是在国外买好了（</p>
-<p>啊，终于有支付宝的选项了。</p>
-<p>最后是358.06买了五年。好像是用了有效的优惠码。本来是400+。</p>
-<h4 id="加砖头！"><a href="#加砖头！" class="headerlink" title="加砖头！"></a>加砖头！</h4><p>一开始是看的<a href="">这个</a>。打算先搭起来再换主题。</p>
-<p>发现godaddy没有域名网站解析的地方。</p>
-<p>因为一开始改了服务器，什么CNAME类型的解析也添加不了。幸好改之前截了图，改回去之后可以看到记录相关，但是还是不可以修改记录值。在ioa姐的带领下修改了A类型记录的指向，网页第一次显示出来了。</p>
-<p>然后ioa姐说很奇怪，我的原始内容和生成的静态页面都混在一起。于是就看ioa姐的<a href="http://bubbleioa.top/archives/1285">这篇</a>了。根本就不需要fork人家的库。</p>
-<p>······</p>
-<p>出现了<code>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</code> 的问题，但是ioa姐文章里的方法用了没有用。</p>
-<p><a href="http://www.cxyzjd.com/article/qq_37555071/114260533">最全的方案</a></p>
-<p>输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
-<p>解决。</p>
-<p>······</p>
-<p>发现没有master的分支。repo里少加了<code>.git</code>。这启示我们抄代码一定要注意抄全，不能丢三落四。</p>
-<p>bash要在博客根目录下面，不然是没有用的。不用cd的话可以直接在根目录右键点击“Git Bash Here”，很方便。</p>
-<p>再之后遇到了怎么也解决不了的麻烦。然后就交给ioa姐了orz</p>
-<blockquote>
-<p>是要用ssh的链接而不是https的。</p>
-</blockquote>
-<p>还用了什么殊途同归的方法解决了无法修改记录值的问题（反正我是不懂啦qwq</p>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><h3 id="主题安装、语言、网站资料、美化etc"><a href="#主题安装、语言、网站资料、美化etc" class="headerlink" title="主题安装、语言、网站资料、美化etc."></a><a href="https://butterfly.js.org/">主题安装、语言、网站资料、美化etc.</a></h3><p>修改<code>.yml</code> 和其他什么文件的时候不要用记事本。</p>
-<p>笔记本配置的时候就已经装了vsc，但是却是用了大半天记事本修改+word查找定位才想起来用。</p>
-<p>注意空格。</p>
-<p>命令行如果显示了源文件的内容那是在报错，看一下在哪里，改掉就可以了，别再 hexo cl hexo g hexo server了，显示不出来的。</p>
-<p>为什么首页有打字效果的那个副标题（subtitle）一直显示不出来？（这个是哭了的qwq</p>
-<p>不清楚，主题作者说“f12”，按了之后竟然就显示出来惹。好像是有什么渲染的作用吧。</p>
-<h3 id="说说"><a href="#说说" class="headerlink" title="说说"></a><a href="https://butterfly.js.org/posts/4073eda/#%E8%AA%AC%E8%AA%AC">说说</a></h3><p>弄了一大半但是没继续弄了，因为感觉现在可能没有必要。</p>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><a href="https://blog.imzjw.cn/posts/b74f504f/">source</a></p>
-<p>没找到好看的字体，暂时搁置。以后遇到好看的再换掉吧。</p>
-<h3 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h3><p>如果需要显示，需要将<code>#</code>去除！（是我自己琢磨出的还是在哪里查到的呢，不记得了（（</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu: </span><br><span class="line">  #   Home: / || fas fa-home</span><br><span class="line">       Archives: /archives/ || fas fa-archive</span><br><span class="line">       Tags: /tags/ || fas fa-tags</span><br><span class="line">       Categories: /categories/ || fas fa-folder-open</span><br><span class="line">  #   List||fas fa-list:</span><br><span class="line">  #   Music: /music/ || fas fa-music</span><br><span class="line">  #   Movie: /movies/ || fas fa-video</span><br><span class="line">       Link: /link/ || fas fa-link</span><br><span class="line">       About: /about/ || fas fa-heart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="配色相关"><a href="#配色相关" class="headerlink" title="配色相关"></a>配色相关</h3><p>可以f12然后<code>Ctrl+Shift+C</code>（点左上角的小箭头也行）直接修改网站元素先预览效果。（ioa姐教的，好用）</p>
-<p>主题色如何修改呢？</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  theme_color:</span><br><span class="line">#   enable: true</span><br><span class="line">#   main: &quot;#ef7967&quot;</span><br><span class="line">#   paginator: &quot;#00c4b6&quot;</span><br><span class="line">#   button_hover: &quot;#f4644e&quot;</span><br><span class="line">#   text_selection: &quot;#00c4b6&quot;</span><br><span class="line">#   link_color: &quot;#f4644e&quot;</span><br><span class="line">#   meta_color: &quot;#858585&quot;</span><br><span class="line">#   hr_color: &quot;#A4D8FA&quot;</span><br><span class="line">#   code_foreground: &quot;#F47466&quot;</span><br><span class="line">#   code_background: &quot;rgba(27, 31, 35, .05)&quot;</span><br><span class="line">#   toc_color: &quot;#00c4b6&quot;</span><br><span class="line">#   blockquote_padding_color: &quot;#49b1f5&quot;</span><br><span class="line">#   blockquote_background_color: &quot;#49b1f5&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这个东西是样式！</p>
-<p>改这个没用啊喂！！</p>
-<p>要把前面的<code>#</code>删掉才行qwq</p>
-<p>页面颜色又是纠结了好久的地方。</p>
-<p>当时是配了三个方案，问了很多友人的意见。基本都说那个浅色的好。</p>
-<p><img src="https://p.sda1.dev/2/a9970284e56080536c3dadd5268bdde0/QQ%E6%88%AA%E5%9B%BE20210617105910.png" alt="浅色"></p>
-<p><img src="https://p.sda1.dev/2/cb1da6c13284d8ab0879e553abaf4f8a/QQ%E6%88%AA%E5%9B%BE20210617094943.png" alt="深色"></p>
-<p>但是还是因为懒+追求简洁和酷炫，继承了白色没有修改qwq</p>
-<h4 id="RGB颜色对照表"><a href="#RGB颜色对照表" class="headerlink" title="RGB颜色对照表"></a><a href="https://tool.oschina.net/commons?type=3">RGB颜色对照表</a></h4><h4 id="图片取色"><a href="#图片取色" class="headerlink" title="图片取色"></a><a href="http://www.atoolbox.net/Tool.php?Id=774">图片取色</a></h4><h4 id="主题色彩生成"><a href="#主题色彩生成" class="headerlink" title="主题色彩生成"></a><a href="https://color.adobe.com/zh/create/image">主题色彩生成</a></h4><h3 id="滚动条"><a href="#滚动条" class="headerlink" title="滚动条"></a>滚动条</h3><p>资料查了但是还没改qwq 以后要是想改就改吧。</p>
-<p><a href="https://blog.yucheng.me/post/hexo-butterfly-theme-configuration/">参考1</a></p>
-<p><a href="https://yunist.cn/hexo/butterfly_modify/">参考2</a></p>
-<p><a href="https://ethant.top/articles/hexo541u/#%E6%BB%9A%E5%8A%A8%E6%9D%A1">参考3</a> 这个比较酷一点。</p>
-<p><a href="https://lilu.org.cn/2021/01/31/butterfly/">参考4</a> 这个好这个好！</p>
-<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p>pixiv万岁！</p>
-<p>昨晚看<del>色</del>图看了好一会儿，找到了不少合适的图。</p>
-<p>推个特别喜欢的画师。<a href="https://www.pixiv.net/users/35025269">真的是好可爱好可爱</a></p>
-<p><a href="https://www.pixiv.net/users/30837811">这位是让我惊叹不已的。艺术品！</a></p>
-<p><a href="https://www.pixiv.net/users/4210443">可爱就完事了</a> 天使wslwsl。</p>
-<p><a href="https://www.pixiv.net/users/19885975">这位是我这里的头像画师。</a></p>
-<p>（啊，跑题了。不过不得不说p站的推荐相关画师的机制真是棒。</p>
-<h3 id="社交图标"><a href="#社交图标" class="headerlink" title="社交图标"></a>社交图标</h3><p>主题自支持的 font-awesome v5图标数量太少了。</p>
-<p><a href="https://blog.imzjw.cn/posts/b74f504f/">参考</a></p>
-<p>要换的话就全部换掉，不然一是大小不一样，而是有的会旋转有的不会。</p>
-<p>追求简洁没有加颜色。</p>
-<h3 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a><a href="https://blog.csdn.net/Calvin_zhou/article/details/110517826">修改网站图标</a></h3><p>自配色~</p>
-<p>望远镜，可爱！</p>
-<p>（我一丈育好像除了可爱之外什么都不会说QAQ</p>
-<p><del>（约莫是世间隅角的惹爱之物，联结着此已崩坍的大地与渺远的天穹</del> 什么鬼啊喂！</p>
-<h3 id="添加评论系统Valine"><a href="#添加评论系统Valine" class="headerlink" title="添加评论系统Valine"></a><a href="https://liuxiangyang.space/2019/10/01/00007/">添加评论系统Valine</a></h3><p>为什么要用valine而不用gitalk其他什么的？好看。</p>
-<p>为什么不用双评论系统？懒+没必要。 </p>
-<h3 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a><a href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%E7%82%BA%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86">文章加密</a></h3><h3 id="修改栏目（？）内字样"><a href="#修改栏目（？）内字样" class="headerlink" title="修改栏目（？）内字样"></a>修改栏目（？）内字样</h3><p>这个地方也停住了好久（</p>
-<p>哦，改到这个地方才发现我语言写的是<code>zh-CH</code>而不是<code>zh-CN</code> qwq 但鉴于用英文会感觉比较适配（帅一点（雾））就还是改成<code>en</code>了。</p>
-<p>到底该如何改掉uv和pv的字样呢？</p>
-<p>butterfly主题下面只有这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># busuanzi count for PV / UV in site</span><br><span class="line"># 訪問人數</span><br><span class="line">busuanzi:</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_pv: true</span><br><span class="line">  page_pv: true</span><br></pre></td></tr></table></figure>
-
-<p>看到next主题下面是这么改的：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># busuanzi count for PV / UV in site</span><br><span class="line"># 訪問人數</span><br><span class="line">busuanzi:</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_uv_header: 世界终端的来访者</span><br><span class="line">  site_uv_footer: 人</span><br><span class="line">  site_pv: true</span><br><span class="line">  site_pv_header: 废土总计扫描</span><br><span class="line">  site_pv_footer: 次 </span><br><span class="line">  page_pv: true</span><br><span class="line">  page_pv_header: 读取数</span><br></pre></td></tr></table></figure>
-
-<p>没有用就是没有用qwq</p>
-<p>甚至还尝试人工寻找有插入busuanzi的文件，然后把</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-
-<p>加入qwq</p>
-<p>还打开看了很多pug styl js文件什么的（</p>
-<p>都以失败告终。</p>
-<p>询问了ioa姐。</p>
-<p>ioa姐的解决方案是修改<code>card_webinfo.pug</code>。</p>
-<p>如下：</p>
-<blockquote>
-<p><img src="https://p.sda1.dev/2/cda240d137adffdae4932d243c3322bc/QQ%E5%9B%BE%E7%89%8720210618191925.png" alt="1"></p>
-<p>替换其中这些带_p()的内容。</p>
-<p><img src="https://p.sda1.dev/2/8a5b78fbc8789c72467eb707870e36fd/QQ%E5%9B%BE%E7%89%8720210618191941.png" alt="例如"></p>
-<p>如果想要加量词的话这要这样：</p>
-<p><img src="https://p.sda1.dev/2/f4ed52df40b47d19582085506e81db6a/QQ%E5%9B%BE%E7%89%8720210618191946.png" alt="加量词"></p>
-</blockquote>
-<p>总结：ioa姐tql！</p>
-<h3 id="更多魔改美化"><a href="#更多魔改美化" class="headerlink" title="更多魔改美化"></a>更多魔改美化</h3><p>在以后很长的一段时间内都不会魔改的（确信。</p>
-<p><a href="https://www.antmoe.com/posts/a811d614/index.html">参考1</a></p>
-<p><a href="https://akilar.top/posts/f99b208/">参考2</a></p>
-<p>不想加了，算了_(:з」∠）</p>
-<p>另外好像还可以用netlify+stackedit 做到在线编辑，不想弄了qwq</p>
-<h2 id="其他一些"><a href="#其他一些" class="headerlink" title="其他一些"></a>其他一些</h2><p><strong>注意备份</strong></p>
-<p>还有什么呢？</p>
-<p>暂时就这样吧，over！w</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>伪技术</tag>
-        <tag>碎碎言</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ttsuxx no 喜欢&#39;s属性全解析！</title>
     <url>/2021/07/11/2021-7-9%20%E5%96%9C%E6%AC%A2%E7%9A%84%E5%B1%9E%E6%80%A7%20223712/</url>
     <content><![CDATA[<h1 id="简介！"><a href="#简介！" class="headerlink" title="简介！"></a>简介！</h1><p>灵感来源: bgmer<a href="https://bgm.tv/user/288280">@陈苦瓜</a> 在茶话会的帖子 <a href="https://bgm.tv/group/topic/363834">俺喜欢的属性全解析</a> ~ </p>
@@ -279,62 +138,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【旧博客】START</title>
-    <url>/2021/06/19/%E3%80%90%E6%97%A7%E5%8D%9A%E5%AE%A2%E3%80%91START/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c2c7fb3459b344b0aff4b2f2acdb61925551c76cd223cc62e197c87cb4db483a">cf4a37a1c7a89a6f17ca36ebe1ce8e32a097341bea98b66828df7917302115dab491160763f944dcbdbb8161be0955d32fb73d97076179dc72e4d9340e6425f91aad7733bd54313427d58e5a9459bf2d7d7a2da3a627d69da6977477dbb39a97f5355901bce2ec646871519fb595f102d8a36dc00a1c09c275cd45f85d9a8cf8fb57dfc553806f8840d4edf22bef9e9aee58880e21e443c9b648418fff591209f93216cccb32d6468d95ce226b49f5aa5d8d524fd55598ba835a5024640a6efd052e633c72559fd96d7ec8fa7a83542bc91099ee19c3c029c3ba099cc3ae2e1d8f4fd6a74a99e9c984239732ee787af9dbe26ba614ee74488f9353519f80af59cbf946f1023f2b34597f165972095972969359f00140fa618b099552e613c9279e74986aaa46938cd55fcd3cdf2035c89160655a63708ca339629c1442b636b606c731977098d97ea42e2310cbf96bcdc9584147f5b62d733844091c265d68a1573a543aa8a2385620adb8396e792737da167a81865d232f5a3a9adfcc3e2e8fb1e481429b04281d7f8448c6e6c09b39879cd5168126c498f845617705570d69d828b5df519f195cb7a892a8efd8ebaed943965034a37a96c0c92137251496b569cdf3771901572c7dbaddbe05a18c84145f95a577f6c361c702d02262f0be7141d118d9eb96929981972b2a42651926c3898e6ce5f8873bcdcea7eecc1ed97f2e541856302eebeb8bc55f47f7687e512efd80abb00e668fa5f787544fdff8abb0abe3bf9c4bc4c22330432773599bcbee98485d3537417119057c124fcbe788a5d65de911eb636a442981d139487747f171df251b09e2663ae0ea5086f044778a674d9570aa23c8e44e48e06e857252feefbdaae40c87bbb87e965b581602f432607b32db2c1e18a548813e9d6f8cb018a1dce8b6453a526a39b8d4b54436292cf3ef41787fdcc4a5e3c78eab450109f5850d352b2ef7b391724e156b75e136139102330b1ef6adbfa2a0bda9c954a9f3e34f87f438db907ee749d2e6e93557f3c17f0979451e32964c4e5c0ed0171516458889e5b1d84d5a55084942c1ccc7677567e633be59f85d556e742f13ae2e9f484d6ce7a3567e834b477ca6f0b89c1c44e72c3049954d972a9370318fe29adec69624dca4cfae07ba6462cdc2da40af4085647f88a393320a012f7c829ba594224d5a5b7b344f822054bde0626096bca15edb2d30e0a11b92111696b82f2c3e8ee4509db0c104378be7bb33ec3a014b26fc4b211fb3687c8bba63969b43591ea14da875c600dcbb6f78efbd6a61bb317e76b17fcd9750c43cacce01ad21bb6126865ff5fc8e66cd32d987f774f14eb03efab1460105a1a5247f762e97eb00a5ba32d066e3cbd68dc18f15f2d23da36d169321512636080356bba203eaf0ec37d3ec8d32afa12f0aefe5f48874e11b71f02ffa7b765be6f0cc95677a59ce26754de5e3afef6133006d330322a496398d6f49f2ae629378949ccb8d7627360f7fa3337a859aebdf745dc31f27b015816faecdf042ca148ab629a76cb38d8787421a41adbd7c98ba043600fdcad59ca281f59c8c81fde22d0d7db7a5bebf1cce930d0840c245e021f9f7181f32bd883639b3fd55a0278f6150580c8c195a1f8b7cdc5ef907199c3e1553b6d906f06406c39da73e6bc8d68b4a2f7952c354e70782e2f60db00057242e533110bc1e6e74a6bc92697523c06e800d82452d285c4c906722717f15524ae8db9967f4e4763448cfbe60b1bd4cda9cdc7769d34009b3ef4217413d55051275690135f72efb6299ec0c9ff53cd953cf7db7a452873f6b85ceef2866c825f26f161fd5ccad6adc8fd389db51b5bd6b4d66b273a96d547b37421050bc0aa13531ffff670879cec7dad157adf666f22522926eeca76722bacd27c16f69088634fbabad7e7b13f348cca572ced50352b12779de57bfb0986c6f993b48356719d0d3bac24a8ccbff7c7680be5dd4fdc25f303ac8d655df1657868e31bdd0ffe2bf3758451af2d437cea9dfdf1a0583480fb6aa08785f1afe9f3fdfa6150e0ef91b4c95db98f550d0dbbb3304c095cf85de7a7765d1ea80dc27b76a3ea69a8d9b7df4abf2a66237906055e12c333305501bd7bb5d8b1d3b0aad2e07089e2e329dfee158a077c4f43dbe21f187b3a91c1eaa0be7064a26b8a24d8e5b2e1ecf7bf6d2da4f0dbd2d623dfb6b9f00582215a52f1d11d9c6c781f4c5fb858ecb7cc58b687e3f1a49a63eb0101e8938bc0d2705791a363ba9eeb4b01b4c1def18de695a45a4522b01821158d92ba7f349fe9978ed410a6b321de3ecdaca0b75d2dbd2fd675969c76d9b6bed9f14be43c1ae870b5997a1bdfa0fa28c9233ba4104ce7adfa887b87aaf001623f8d6b5fab8ac184fc778239a9771bf7b2b9fb87ae3ae425eb8aec046d7a8a6e9ba7abd5951fb83b8701fe45acc59e37d0026063e5041f99f8fd563620173767a5f1206e037b6d02f02cf165c868de34600de57c11109f1404a3ccdbae2449f40202833ff3d10d5082d6fcf49486ce1123f830cf191abf5b5f82d84b744f0c28eb1e4d2754f4c28fb7a81ecd2c8877970af9cf738182bcfb10da2d3af55417e138a5287756b679afa9e6738388875c2454aec4bce2081d101e39661d70395fccaeefceba008224a0d2116bdcf6237532cec8d0c93667c19a3578a943ce19ea0d017c07cf7f197a8befa76d1b0f6a888509e6b65cb7f8d179b155bcfab67907a590c6262cb01698b989c03fa20343f8cadb4f2725fa6615e1294c3a99dbb034a7421a6ac5f9ed2ae54bbe83ae3d95af6c0a9b9463f7e3ded220c6492e664084191579ea8becdc5b9bbbb463c62f9dc80f01cbb44672cfbaffa754bab98c61ef2c2837aa1e0374cd7a7c79070e008c2186ebdde3c141644e5d2eb25020f276042bd1b478ff6aad2fed54f8bfd6f8417c042825cb8254f3c8f04204650978e8ef102dfa771b6496f218007ab7589d05eb9d17fd99aec95e888e91df7f76c28c0950bd768b8a4e5282b8e6457c73ea59f5fdd5f15b27a5574cb402155adbe31346752a418b70122f633bca3be5dc3db552545302b9c3d3480b1d2733bf7c86437e44a5c063837407d888a1e0fe2ff2db2035826fedff65ee71ab4d3dc1af9e5314d40bb5cedcb63dc375ce7d8cae592f8d9413da9ab5d45ca183ed54a8c3193160b546971c5aea5749fdf685c94aaf7a24d6ff0b7ffd6b3b5e4a897de867435a309753064a581d4729970a5eb3337a7a851c7dbd2231060cb953f9817f7f5852637e34326b1cf047c8d1d4e3915f0f3ec36f187e8d25eff8885de94bf4696411d4f3522e358af6e001bf87ddc1bac48523a1fec6ad9cfaf7d54f8e032d8c028aa4d711615393aefb7b3df80eca1e75828046395b5287d368838aa55f9b1d41cbd23c721a2c4f546a6ffa8a55488b96695a78b6764e9c097513db80cfe2824654b16c8d68894105a7e15adaa22ddfc09b54f76f5a77726e793adf4ade53a614a3107fab267ddb56b36cdd17340a83a433590340a35c1c3e2a90158a54d1f40165b6575a9e3d23a673884812138703ab61a26151a183ba6e7c5950df4d138d11daa23664e78570ba10927626d90978cd3b16a535ff4138ed83a32aded06d7ca6c8561a660c846612b1bc78a6d2ec6dd659cf577e0e0f008ed9b108d31de9db61afd1afb999ca15bd6f19a75a6c7fc91fc0128ad4495d3168d1bc44448065022b4f694685a8dce868d6a705be4feb5e3cb142fbc9d1977e547e7e500d92ffcf3a6f41c11bc6b514a88d155aad9cbc01fa0b04524a7da8f849717dff10e90ce8f1190e207b81218e75023368c7f4a17cc7601feb1c0c58ed35a49f900b006d9717e3e3dd4fb7237d59689ca89e4abe3ba40101d089ce44621f6eceacd893db2102d4c1e59d9786c6fc7c37f3d47b084c6d515ef67f1f5906d48d5969d0aabb7fd727d263cd0a70e6e2abf65a00cfe7581f3f40f47e3b434b6b1a81fd8c1781df0d4236aef652bbfc14ab57e7b39623b98766d2c7054183fefaf5cb31a5acc98a176c6e0bd6b5582584f7221d8c780affee2e958402455af2753a546d63a5c4b3dd9d8ac5ce98605f75c947d6d81dac0721f1a2aa5aa6e339a124f30a41402171ecb55e642fa980b8f24dc05a1350901b9444c89e71557fb35df8ff90c40cc0e3c4d90cb256ebffa06ca0c30d3fe750d496e4812d03a4627c6a69bce31472e6dce0aeed724a47405587d1e2a7060ccb3f573525dc174d6f34975a694d6e1f750b9792778828257db0158e4a3ad692546930b0f59bdee49e3778b7a57c0e263501174208fd5e7df1a995d24d10648c640219afbcb2e071f714ff97caddcc76af26315f1df97b12e7db092bdd49c1582820c361393646f9ca85271bd1fd69463162a1bbe221475552592e6df7e20537b23b78e27308f5d8bf215a63657774afac6dda49c7ee32731b4cf304ce8b3b81e647b13c1712bfb9211408f25c81ad34042b01ea2ca4644328b66326b205fdf428e3b8342af15b9f8c40eb3cce89d1e1937d6c01bdfa04f3b917caff443c4e0c35f51ccfac577d691a966de41ccf03f06b2042556ccf06d443966f37688b91689f2eed0f6ed2ea6632b6b69a5d4c28b815a2951bb88c7ddd9b64c38d52d44c4c0ce72f07d00e84ce793fc8a30351463df9c9ba082f9f94ab8e4c6ca9da6099753e0705b17d52320d9cb9b35259cc0477fbe51e6b5a740ab68f3a8271273e96c4e0f744d54201de39c4dae316303b8e1b5ebdaa5cd49167790ab38893be61954c219181709ea2c4af3f32d3d3f3cdef0bdfeca479382d9648c9ae51e841539ae27d192af360e11c57d74498a8acc6bfdae959b3438d73b25d36b82c04fa18748777006208bc664002cbcac70a5957dba0588a2aeba5d203f6865badceef678e76af8d723c9852a0cbe8bfca3da6c724f4ecc21604435ae028e244cecdbbb9c553f20ab2653a1d56442338e890b21a4d7ccd3f42e471974aa0fc5c67622b48ae36e01239e5449e9cb07fdfbd8a73fa937741b391a0c6f70610e153095347c11ba92fef35d3f41c4229ad7eb254a79b3833aa75ce3a745f9cb9cd7bd81f5670337c3de02d404de56c62b1317d968878f8d258089f4b99f6a462949b52fb829068b1db66e9a61e0533dafb40db1762ef52204f6e559a7de66207b14c0538ffd3fa81843e3f3382d14fdc15d1f814783ee25ef11ea4c65afa116c4bd46d599ee9bdf44860e80bcd8af86c6df9c6c1c8659904226a0fb9e381e046ce7eec2947b9dc2ce1072ec0c20a052e5983c2249e097a607d4abd6c7a69df92ead02068e1d3b34aa4f9682455b3580445b9bbe112555610d98c615bab38ee498ac123e4623f30011ee1d4f1537e2e8303b00a91bd61be90e8aa107647344dcca87d5af44e29333394325670ebc063e2cf05a1d641a5be32e70e7a7096ae1d74c8f2fbc1b90ce7f9ce37ddf051cb5cfbebc1093a7be136f6a65cedd38abbe17a3908fe1fc0d961c0a4f9dbd7221693ed9a89ead18a113ea24fe46743de5cc738d276e28d856b0336acea664b9fa02947a52e313a0f998292c249fa84c38db43955cddfafed80f69624fd119ed660ab566943e6a607970d2849c3ce77cb1a82a9e2875dd6260e247789f7cd9a8e40d40ab6ee86b607462e40c04113fbebdde68af671b399068024e9c03995c0cf116dd34de0efc1b3992bcdfdbda1161f8487077af9bbc66f9890a6a6693c53073d27a9f51d8842e5e3e41b467fc8d5c024132e3ca047ab3fd683e27a2888bad111283ba9a72a6728cc5bc1e8aed7dd964237b1e649a261e409c4256218f2995e4dbf0</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>存档</tag>
-        <tag>黑历史</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【旧博客】悲哀得几乎哭出来。</title>
-    <url>/2021/06/19/%E3%80%90%E6%97%A7%E5%8D%9A%E5%AE%A2%E3%80%91%E6%82%B2%E5%93%80%E5%BE%97%E5%87%A0%E4%B9%8E%E5%93%AD%E5%87%BA%E6%9D%A5%E3%80%82/</url>
-    <content><![CDATA[<p>2019-09-05</p>
-<p>悲哀得几乎哭出来。</p>
-<p>这种时候，就是会止不住地去思考呢。</p>
-<p>当时我要是勇敢些，十年前我就已经不在这个世上了。</p>
-<p>但也会庆幸那时的未下定决心，不然就不会接触到我所喜爱的事物和我所珍惜的人们。</p>
-<p>活着到底是意味着什么呢，于我而言，答案或许是我不确定什么时候就想好的死法吧。</p>
-<p>可能我就是为了那最后一瞬而存在的吧。</p>
-<p>但是又很明白实现的可能之微。</p>
-<p>我清楚地知道现在还不是死的时候。真是可笑，每次想着还不能去死的时候，竟是为了另一个去死的时候。</p>
-<p>不吝啬我的生命，我的渺小无能使我即使在死后有人为我痛惜也不会悲哀太久。几乎所有的人不都是这样吗，忘却似乎是一件非常容易的事。就算有人在他的一生中可以一直记住我，但他死后呢？我存在的证明终会全部湮灭。况且我也不值得他人去铭记。</p>
-<p>真想有人能知道我的想法啊，遇到可以交心的人，有时间去交流。虽然也不是什么深刻的思想，但那样即使是提前死去，我所想的至少还能在其他生命中暂存。啊又开始不知道如何表达自己了，语无伦次就语无伦次吧。</p>
-<p>那么那种“暂存”的意义又是什么呢，为什么我会想渴望被全部理解呢？是本能的驱使吗？好像全部又都没了意义。</p>
-<p>意义又是种什么东西呢，所有东西都必须要有意义才能存在吗。</p>
-<p>那或许我的存在就是无意义。</p>
-<p>全部世界的存在也是无意义吗。</p>
-<p>这问题的答案也是无意义。</p>
-<p>无意义就无意义吧。</p>
-<p>在达成之前，任何可能会死的情况都会使我抗拒呢。</p>
-<p>那时最强烈的想法果然还是不甘心啊。</p>
-<p>但要是真的无法达成的话，就提前去死吧。</p>
-<p>这种时候总会想到死生，也是我作为人的局限性吧。</p>
-]]></content>
-      <categories>
-        <category>被黑洞吸入的垃圾桶</category>
-      </categories>
-      <tags>
-        <tag>感慨</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【旧博客】中考倒计时记录打卡日记选录</title>
     <url>/2021/06/19/%E3%80%90%E6%97%A7%E5%8D%9A%E5%AE%A2%E3%80%91%E4%B8%AD%E8%80%83%E5%80%92%E8%AE%A1%E6%97%B6%E8%AE%B0%E5%BD%95%E6%89%93%E5%8D%A1%E6%97%A5%E8%AE%B0%E9%80%89%E5%BD%95/</url>
     <content><![CDATA[<p>啊，才发现当时只录了一小部分，没有录到最后，如果以后实在没事干那就试着录完吧，暂时就这样。现在日记已经有1300+了。</p>
@@ -428,13 +231,178 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>碎碎言</tag>
-        <tag>存档</tag>
         <tag>黑历史</tag>
+        <tag>碎碎言</tag>
         <tag>初中</tag>
         <tag>日常</tag>
         <tag>中考</tag>
         <tag>日记</tag>
+        <tag>存档</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello, world! &amp;弯路日志</title>
+    <url>/2021/06/18/Hello,%20world!%20&amp;%E5%BC%AF%E8%B7%AF%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<p>Hello, world!  t酱的博客又有啦，诶嘿ww</p>
+<p>这篇以后不出意外的话肯定是绝对的黑历史。人嘛，总是要从无知到有知再到更有知的（雾）。虽然这几天实际上也没有学到什么本质的东西，但至少拿到了一点皮毛上的尖尖吧？（心虚）</p>
+<p>三四天断断续续终于差不多配置完了（瘫。之后大概还会改一下subtitle、description、配色什么的（？ 看心情。不想弄得太花里胡哨，文章封面暂时也去掉。</p>
+<p>因为我真的是一点点基础都没有，大佬们很多默认的大家都会的东西提都没提，我就因此在很多很多“不可能有问题”的地方卡住了qwq 甚至还绝望哭了两三次（我真没用啊QAQ</p>
+<p>查了巨多的资料，也请教了大佬，目前就是这个样子了。（感觉有点经验的最多3h就好了呜呜呜。</p>
+<p>写一个这个主要用作自己备忘，因为大概也没有人会垃圾到需要参考到我的这个（（</p>
+<p>感谢<a href="http://bubbleioa.top/">ioa姐</a>的大力援助orz</p>
+<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><h3 id="静态和动态博客的选择"><a href="#静态和动态博客的选择" class="headerlink" title="静态和动态博客的选择"></a>静态和动态博客的选择</h3><p><a href="https://www.html.cn/qa/frontend/20461.html">静态网页和动态网页的区别</a></p>
+<p>两年前折腾过动态的，想用wordpress，没有服务器就在本机上各种操作，什么nginx，什么apache之类的东西qwq 之后是11某大佬一路帮助（</p>
+<p> 个人体感是动态前期部署和后期维护麻烦，使用中非常方便（呜呜呜真的好方便）。需要服务器。</p>
+<p>静态的托管到Github Pages上可以不用服务器，维护方便（？）比动态的安全。但是主题设置相关麻烦（一劳永逸？）。</p>
+<p>基于我为零的技术基础以及低需求，当然是选择静态！</p>
+<p>或许以后（很久以后）会试试看放自己做的视频上来？（多分。</p>
+<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p><a href="https://www.zhihu.com/question/20513729/answer/96332435">域名是如何运行的</a></p>
+<h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4><p>ID 是Ttsuxx，那肯定是要ttsuxx开头。</p>
+<p>选什么后缀好呢？</p>
+<p>为什么选择cc？</p>
+<ol>
+<li>和tt、xx一样是两个字母重叠，非常整齐！w</li>
+<li>只有两个字母，够短，好记w</li>
+</ol>
+<h4 id="注册商"><a href="#注册商" class="headerlink" title="注册商"></a>注册商</h4><p>这个东西我纠结了半天（</p>
+<p>啊啊啊啊好像是在国外网站买会比较好一点，嗯….那还是就在godaddy上买好了。</p>
+<p>诶诶诶不是说godaddy可以用支付宝的吗？! 为什么没有支付宝的选项QAQ</p>
+<p>诶，也有人在喷godaddy！国内的注册商也是被喷到不行！</p>
+<p>哇！为什么国内注册商这么便宜！五年只要100+！</p>
+<p>国内好像还是麻烦得很诶，还是在国外买好了（</p>
+<p>啊，终于有支付宝的选项了。</p>
+<p>最后是358.06买了五年。好像是用了有效的优惠码。本来是400+。</p>
+<h4 id="加砖头！"><a href="#加砖头！" class="headerlink" title="加砖头！"></a>加砖头！</h4><p>一开始是看的<a href="">这个</a>。打算先搭起来再换主题。</p>
+<p>发现godaddy没有域名网站解析的地方。</p>
+<p>因为一开始改了服务器，什么CNAME类型的解析也添加不了。幸好改之前截了图，改回去之后可以看到记录相关，但是还是不可以修改记录值。在ioa姐的带领下修改了A类型记录的指向，网页第一次显示出来了。</p>
+<p>然后ioa姐说很奇怪，我的原始内容和生成的静态页面都混在一起。于是就看ioa姐的<a href="http://bubbleioa.top/archives/1285">这篇</a>了。根本就不需要fork人家的库。</p>
+<p>······</p>
+<p>出现了<code>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</code> 的问题，但是ioa姐文章里的方法用了没有用。</p>
+<p><a href="http://www.cxyzjd.com/article/qq_37555071/114260533">最全的方案</a></p>
+<p>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+<p>解决。</p>
+<p>······</p>
+<p>发现没有master的分支。repo里少加了<code>.git</code>。这启示我们抄代码一定要注意抄全，不能丢三落四。</p>
+<p>bash要在博客根目录下面，不然是没有用的。不用cd的话可以直接在根目录右键点击“Git Bash Here”，很方便。</p>
+<p>再之后遇到了怎么也解决不了的麻烦。然后就交给ioa姐了orz</p>
+<blockquote>
+<p>是要用ssh的链接而不是https的。</p>
+</blockquote>
+<p>还用了什么殊途同归的方法解决了无法修改记录值的问题（反正我是不懂啦qwq</p>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><h3 id="主题安装、语言、网站资料、美化etc"><a href="#主题安装、语言、网站资料、美化etc" class="headerlink" title="主题安装、语言、网站资料、美化etc."></a><a href="https://butterfly.js.org/">主题安装、语言、网站资料、美化etc.</a></h3><p>修改<code>.yml</code> 和其他什么文件的时候不要用记事本。</p>
+<p>笔记本配置的时候就已经装了vsc，但是却是用了大半天记事本修改+word查找定位才想起来用。</p>
+<p>注意空格。</p>
+<p>命令行如果显示了源文件的内容那是在报错，看一下在哪里，改掉就可以了，别再 hexo cl hexo g hexo server了，显示不出来的。</p>
+<p>为什么首页有打字效果的那个副标题（subtitle）一直显示不出来？（这个是哭了的qwq</p>
+<p>不清楚，主题作者说“f12”，按了之后竟然就显示出来惹。好像是有什么渲染的作用吧。</p>
+<h3 id="说说"><a href="#说说" class="headerlink" title="说说"></a><a href="https://butterfly.js.org/posts/4073eda/#%E8%AA%AC%E8%AA%AC">说说</a></h3><p>弄了一大半但是没继续弄了，因为感觉现在可能没有必要。</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><a href="https://blog.imzjw.cn/posts/b74f504f/">source</a></p>
+<p>没找到好看的字体，暂时搁置。以后遇到好看的再换掉吧。</p>
+<h3 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h3><p>如果需要显示，需要将<code>#</code>去除！（是我自己琢磨出的还是在哪里查到的呢，不记得了（（</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu: </span><br><span class="line">  #   Home: / || fas fa-home</span><br><span class="line">       Archives: /archives/ || fas fa-archive</span><br><span class="line">       Tags: /tags/ || fas fa-tags</span><br><span class="line">       Categories: /categories/ || fas fa-folder-open</span><br><span class="line">  #   List||fas fa-list:</span><br><span class="line">  #   Music: /music/ || fas fa-music</span><br><span class="line">  #   Movie: /movies/ || fas fa-video</span><br><span class="line">       Link: /link/ || fas fa-link</span><br><span class="line">       About: /about/ || fas fa-heart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="配色相关"><a href="#配色相关" class="headerlink" title="配色相关"></a>配色相关</h3><p>可以f12然后<code>Ctrl+Shift+C</code>（点左上角的小箭头也行）直接修改网站元素先预览效果。（ioa姐教的，好用）</p>
+<p>主题色如何修改呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  theme_color:</span><br><span class="line">#   enable: true</span><br><span class="line">#   main: &quot;#ef7967&quot;</span><br><span class="line">#   paginator: &quot;#00c4b6&quot;</span><br><span class="line">#   button_hover: &quot;#f4644e&quot;</span><br><span class="line">#   text_selection: &quot;#00c4b6&quot;</span><br><span class="line">#   link_color: &quot;#f4644e&quot;</span><br><span class="line">#   meta_color: &quot;#858585&quot;</span><br><span class="line">#   hr_color: &quot;#A4D8FA&quot;</span><br><span class="line">#   code_foreground: &quot;#F47466&quot;</span><br><span class="line">#   code_background: &quot;rgba(27, 31, 35, .05)&quot;</span><br><span class="line">#   toc_color: &quot;#00c4b6&quot;</span><br><span class="line">#   blockquote_padding_color: &quot;#49b1f5&quot;</span><br><span class="line">#   blockquote_background_color: &quot;#49b1f5&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这个东西是样式！</p>
+<p>改这个没用啊喂！！</p>
+<p>要把前面的<code>#</code>删掉才行qwq</p>
+<p>页面颜色又是纠结了好久的地方。</p>
+<p>当时是配了三个方案，问了很多友人的意见。基本都说那个浅色的好。</p>
+<p><img src="https://p.sda1.dev/2/a9970284e56080536c3dadd5268bdde0/QQ%E6%88%AA%E5%9B%BE20210617105910.png" alt="浅色"></p>
+<p><img src="https://p.sda1.dev/2/cb1da6c13284d8ab0879e553abaf4f8a/QQ%E6%88%AA%E5%9B%BE20210617094943.png" alt="深色"></p>
+<p>但是还是因为懒+追求简洁和酷炫，继承了白色没有修改qwq</p>
+<h4 id="RGB颜色对照表"><a href="#RGB颜色对照表" class="headerlink" title="RGB颜色对照表"></a><a href="https://tool.oschina.net/commons?type=3">RGB颜色对照表</a></h4><h4 id="图片取色"><a href="#图片取色" class="headerlink" title="图片取色"></a><a href="http://www.atoolbox.net/Tool.php?Id=774">图片取色</a></h4><h4 id="主题色彩生成"><a href="#主题色彩生成" class="headerlink" title="主题色彩生成"></a><a href="https://color.adobe.com/zh/create/image">主题色彩生成</a></h4><h3 id="滚动条"><a href="#滚动条" class="headerlink" title="滚动条"></a>滚动条</h3><p>资料查了但是还没改qwq 以后要是想改就改吧。</p>
+<p><a href="https://blog.yucheng.me/post/hexo-butterfly-theme-configuration/">参考1</a></p>
+<p><a href="https://yunist.cn/hexo/butterfly_modify/">参考2</a></p>
+<p><a href="https://ethant.top/articles/hexo541u/#%E6%BB%9A%E5%8A%A8%E6%9D%A1">参考3</a> 这个比较酷一点。</p>
+<p><a href="https://lilu.org.cn/2021/01/31/butterfly/">参考4</a> 这个好这个好！</p>
+<h3 id="image"><a href="#image" class="headerlink" title="image"></a>image</h3><p>pixiv万岁！</p>
+<p>昨晚看<del>色</del>图看了好一会儿，找到了不少合适的图。</p>
+<p>推个特别喜欢的画师。<a href="https://www.pixiv.net/users/35025269">真的是好可爱好可爱</a></p>
+<p><a href="https://www.pixiv.net/users/30837811">这位是让我惊叹不已的。艺术品！</a></p>
+<p><a href="https://www.pixiv.net/users/4210443">可爱就完事了</a> 天使wslwsl。</p>
+<p><a href="https://www.pixiv.net/users/19885975">这位是我这里的头像画师。</a></p>
+<p>（啊，跑题了。不过不得不说p站的推荐相关画师的机制真是棒。</p>
+<h3 id="社交图标"><a href="#社交图标" class="headerlink" title="社交图标"></a>社交图标</h3><p>主题自支持的 font-awesome v5图标数量太少了。</p>
+<p><a href="https://blog.imzjw.cn/posts/b74f504f/">参考</a></p>
+<p>要换的话就全部换掉，不然一是大小不一样，而是有的会旋转有的不会。</p>
+<p>追求简洁没有加颜色。</p>
+<h3 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a><a href="https://blog.csdn.net/Calvin_zhou/article/details/110517826">修改网站图标</a></h3><p>自配色~</p>
+<p>望远镜，可爱！</p>
+<p>（我一丈育好像除了可爱之外什么都不会说QAQ</p>
+<p><del>（约莫是世间隅角的惹爱之物，联结着此已崩坍的大地与渺远的天穹</del> 什么鬼啊喂！</p>
+<h3 id="添加评论系统Valine"><a href="#添加评论系统Valine" class="headerlink" title="添加评论系统Valine"></a><a href="https://liuxiangyang.space/2019/10/01/00007/">添加评论系统Valine</a></h3><p>为什么要用valine而不用gitalk其他什么的？好看。</p>
+<p>为什么不用双评论系统？懒+没必要。 </p>
+<h3 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a><a href="https://ouoholly.github.io/post/my-custom-config-on-hexo-butterfly-theme/#%E7%82%BA%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86">文章加密</a></h3><h3 id="修改栏目（？）内字样"><a href="#修改栏目（？）内字样" class="headerlink" title="修改栏目（？）内字样"></a>修改栏目（？）内字样</h3><p>这个地方也停住了好久（</p>
+<p>哦，改到这个地方才发现我语言写的是<code>zh-CH</code>而不是<code>zh-CN</code> qwq 但鉴于用英文会感觉比较适配（帅一点（雾））就还是改成<code>en</code>了。</p>
+<p>到底该如何改掉uv和pv的字样呢？</p>
+<p>butterfly主题下面只有这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># busuanzi count for PV / UV in site</span><br><span class="line"># 訪問人數</span><br><span class="line">busuanzi:</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_pv: true</span><br><span class="line">  page_pv: true</span><br></pre></td></tr></table></figure>
+
+<p>看到next主题下面是这么改的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># busuanzi count for PV / UV in site</span><br><span class="line"># 訪問人數</span><br><span class="line">busuanzi:</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_uv_header: 世界终端的来访者</span><br><span class="line">  site_uv_footer: 人</span><br><span class="line">  site_pv: true</span><br><span class="line">  site_pv_header: 废土总计扫描</span><br><span class="line">  site_pv_footer: 次 </span><br><span class="line">  page_pv: true</span><br><span class="line">  page_pv_header: 读取数</span><br></pre></td></tr></table></figure>
+
+<p>没有用就是没有用qwq</p>
+<p>甚至还尝试人工寻找有插入busuanzi的文件，然后把</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>加入qwq</p>
+<p>还打开看了很多pug styl js文件什么的（</p>
+<p>都以失败告终。</p>
+<p>询问了ioa姐。</p>
+<p>ioa姐的解决方案是修改<code>card_webinfo.pug</code>。</p>
+<p>如下：</p>
+<blockquote>
+<p><img src="https://p.sda1.dev/2/cda240d137adffdae4932d243c3322bc/QQ%E5%9B%BE%E7%89%8720210618191925.png" alt="1"></p>
+<p>替换其中这些带_p()的内容。</p>
+<p><img src="https://p.sda1.dev/2/8a5b78fbc8789c72467eb707870e36fd/QQ%E5%9B%BE%E7%89%8720210618191941.png" alt="例如"></p>
+<p>如果想要加量词的话这要这样：</p>
+<p><img src="https://p.sda1.dev/2/f4ed52df40b47d19582085506e81db6a/QQ%E5%9B%BE%E7%89%8720210618191946.png" alt="加量词"></p>
+</blockquote>
+<p>总结：ioa姐tql！</p>
+<h3 id="更多魔改美化"><a href="#更多魔改美化" class="headerlink" title="更多魔改美化"></a>更多魔改美化</h3><p>在以后很长的一段时间内都不会魔改的（确信。</p>
+<p><a href="https://www.antmoe.com/posts/a811d614/index.html">参考1</a></p>
+<p><a href="https://akilar.top/posts/f99b208/">参考2</a></p>
+<p>不想加了，算了_(:з」∠）</p>
+<p>另外好像还可以用netlify+stackedit 做到在线编辑，不想弄了qwq</p>
+<h2 id="其他一些"><a href="#其他一些" class="headerlink" title="其他一些"></a>其他一些</h2><p><strong>注意备份</strong></p>
+<p>还有什么呢？</p>
+<p>暂时就这样吧，over！w</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>碎碎言</tag>
+        <tag>伪技术</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【旧博客】START</title>
+    <url>/2021/06/19/%E3%80%90%E6%97%A7%E5%8D%9A%E5%AE%A2%E3%80%91START/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c2c7fb3459b344b0aff4b2f2acdb61925551c76cd223cc62e197c87cb4db483a">cf4a37a1c7a89a6f17ca36ebe1ce8e32a097341bea98b66828df7917302115dab491160763f944dcbdbb8161be0955d32fb73d97076179dc72e4d9340e6425f91aad7733bd54313427d58e5a9459bf2d7d7a2da3a627d69da6977477dbb39a97f5355901bce2ec646871519fb595f102d8a36dc00a1c09c275cd45f85d9a8cf8fb57dfc553806f8840d4edf22bef9e9aee58880e21e443c9b648418fff591209f93216cccb32d6468d95ce226b49f5aa5d8d524fd55598ba835a5024640a6efd052e633c72559fd96d7ec8fa7a83542bc91099ee19c3c029c3ba099cc3ae2e1d8f4fd6a74a99e9c984239732ee787af9dbe26ba614ee74488f9353519f80af59cbf946f1023f2b34597f165972095972969359f00140fa618b099552e613c9279e74986aaa46938cd55fcd3cdf2035c89160655a63708ca339629c1442b636b606c731977098d97ea42e2310cbf96bcdc9584147f5b62d733844091c265d68a1573a543aa8a2385620adb8396e792737da167a81865d232f5a3a9adfcc3e2e8fb1e481429b04281d7f8448c6e6c09b39879cd5168126c498f845617705570d69d828b5df519f195cb7a892a8efd8ebaed943965034a37a96c0c92137251496b569cdf3771901572c7dbaddbe05a18c84145f95a577f6c361c702d02262f0be7141d118d9eb96929981972b2a42651926c3898e6ce5f8873bcdcea7eecc1ed97f2e541856302eebeb8bc55f47f7687e512efd80abb00e668fa5f787544fdff8abb0abe3bf9c4bc4c22330432773599bcbee98485d3537417119057c124fcbe788a5d65de911eb636a442981d139487747f171df251b09e2663ae0ea5086f044778a674d9570aa23c8e44e48e06e857252feefbdaae40c87bbb87e965b581602f432607b32db2c1e18a548813e9d6f8cb018a1dce8b6453a526a39b8d4b54436292cf3ef41787fdcc4a5e3c78eab450109f5850d352b2ef7b391724e156b75e136139102330b1ef6adbfa2a0bda9c954a9f3e34f87f438db907ee749d2e6e93557f3c17f0979451e32964c4e5c0ed0171516458889e5b1d84d5a55084942c1ccc7677567e633be59f85d556e742f13ae2e9f484d6ce7a3567e834b477ca6f0b89c1c44e72c3049954d972a9370318fe29adec69624dca4cfae07ba6462cdc2da40af4085647f88a393320a012f7c829ba594224d5a5b7b344f822054bde0626096bca15edb2d30e0a11b92111696b82f2c3e8ee4509db0c104378be7bb33ec3a014b26fc4b211fb3687c8bba63969b43591ea14da875c600dcbb6f78efbd6a61bb317e76b17fcd9750c43cacce01ad21bb6126865ff5fc8e66cd32d987f774f14eb03efab1460105a1a5247f762e97eb00a5ba32d066e3cbd68dc18f15f2d23da36d169321512636080356bba203eaf0ec37d3ec8d32afa12f0aefe5f48874e11b71f02ffa7b765be6f0cc95677a59ce26754de5e3afef6133006d330322a496398d6f49f2ae629378949ccb8d7627360f7fa3337a859aebdf745dc31f27b015816faecdf042ca148ab629a76cb38d8787421a41adbd7c98ba043600fdcad59ca281f59c8c81fde22d0d7db7a5bebf1cce930d0840c245e021f9f7181f32bd883639b3fd55a0278f6150580c8c195a1f8b7cdc5ef907199c3e1553b6d906f06406c39da73e6bc8d68b4a2f7952c354e70782e2f60db00057242e533110bc1e6e74a6bc92697523c06e800d82452d285c4c906722717f15524ae8db9967f4e4763448cfbe60b1bd4cda9cdc7769d34009b3ef4217413d55051275690135f72efb6299ec0c9ff53cd953cf7db7a452873f6b85ceef2866c825f26f161fd5ccad6adc8fd389db51b5bd6b4d66b273a96d547b37421050bc0aa13531ffff670879cec7dad157adf666f22522926eeca76722bacd27c16f69088634fbabad7e7b13f348cca572ced50352b12779de57bfb0986c6f993b48356719d0d3bac24a8ccbff7c7680be5dd4fdc25f303ac8d655df1657868e31bdd0ffe2bf3758451af2d437cea9dfdf1a0583480fb6aa08785f1afe9f3fdfa6150e0ef91b4c95db98f550d0dbbb3304c095cf85de7a7765d1ea80dc27b76a3ea69a8d9b7df4abf2a66237906055e12c333305501bd7bb5d8b1d3b0aad2e07089e2e329dfee158a077c4f43dbe21f187b3a91c1eaa0be7064a26b8a24d8e5b2e1ecf7bf6d2da4f0dbd2d623dfb6b9f00582215a52f1d11d9c6c781f4c5fb858ecb7cc58b687e3f1a49a63eb0101e8938bc0d2705791a363ba9eeb4b01b4c1def18de695a45a4522b01821158d92ba7f349fe9978ed410a6b321de3ecdaca0b75d2dbd2fd675969c76d9b6bed9f14be43c1ae870b5997a1bdfa0fa28c9233ba4104ce7adfa887b87aaf001623f8d6b5fab8ac184fc778239a9771bf7b2b9fb87ae3ae425eb8aec046d7a8a6e9ba7abd5951fb83b8701fe45acc59e37d0026063e5041f99f8fd563620173767a5f1206e037b6d02f02cf165c868de34600de57c11109f1404a3ccdbae2449f40202833ff3d10d5082d6fcf49486ce1123f830cf191abf5b5f82d84b744f0c28eb1e4d2754f4c28fb7a81ecd2c8877970af9cf738182bcfb10da2d3af55417e138a5287756b679afa9e6738388875c2454aec4bce2081d101e39661d70395fccaeefceba008224a0d2116bdcf6237532cec8d0c93667c19a3578a943ce19ea0d017c07cf7f197a8befa76d1b0f6a888509e6b65cb7f8d179b155bcfab67907a590c6262cb01698b989c03fa20343f8cadb4f2725fa6615e1294c3a99dbb034a7421a6ac5f9ed2ae54bbe83ae3d95af6c0a9b9463f7e3ded220c6492e664084191579ea8becdc5b9bbbb463c62f9dc80f01cbb44672cfbaffa754bab98c61ef2c2837aa1e0374cd7a7c79070e008c2186ebdde3c141644e5d2eb25020f276042bd1b478ff6aad2fed54f8bfd6f8417c042825cb8254f3c8f04204650978e8ef102dfa771b6496f218007ab7589d05eb9d17fd99aec95e888e91df7f76c28c0950bd768b8a4e5282b8e6457c73ea59f5fdd5f15b27a5574cb402155adbe31346752a418b70122f633bca3be5dc3db552545302b9c3d3480b1d2733bf7c86437e44a5c063837407d888a1e0fe2ff2db2035826fedff65ee71ab4d3dc1af9e5314d40bb5cedcb63dc375ce7d8cae592f8d9413da9ab5d45ca183ed54a8c3193160b546971c5aea5749fdf685c94aaf7a24d6ff0b7ffd6b3b5e4a897de867435a309753064a581d4729970a5eb3337a7a851c7dbd2231060cb953f9817f7f5852637e34326b1cf047c8d1d4e3915f0f3ec36f187e8d25eff8885de94bf4696411d4f3522e358af6e001bf87ddc1bac48523a1fec6ad9cfaf7d54f8e032d8c028aa4d711615393aefb7b3df80eca1e75828046395b5287d368838aa55f9b1d41cbd23c721a2c4f546a6ffa8a55488b96695a78b6764e9c097513db80cfe2824654b16c8d68894105a7e15adaa22ddfc09b54f76f5a77726e793adf4ade53a614a3107fab267ddb56b36cdd17340a83a433590340a35c1c3e2a90158a54d1f40165b6575a9e3d23a673884812138703ab61a26151a183ba6e7c5950df4d138d11daa23664e78570ba10927626d90978cd3b16a535ff4138ed83a32aded06d7ca6c8561a660c846612b1bc78a6d2ec6dd659cf577e0e0f008ed9b108d31de9db61afd1afb999ca15bd6f19a75a6c7fc91fc0128ad4495d3168d1bc44448065022b4f694685a8dce868d6a705be4feb5e3cb142fbc9d1977e547e7e500d92ffcf3a6f41c11bc6b514a88d155aad9cbc01fa0b04524a7da8f849717dff10e90ce8f1190e207b81218e75023368c7f4a17cc7601feb1c0c58ed35a49f900b006d9717e3e3dd4fb7237d59689ca89e4abe3ba40101d089ce44621f6eceacd893db2102d4c1e59d9786c6fc7c37f3d47b084c6d515ef67f1f5906d48d5969d0aabb7fd727d263cd0a70e6e2abf65a00cfe7581f3f40f47e3b434b6b1a81fd8c1781df0d4236aef652bbfc14ab57e7b39623b98766d2c7054183fefaf5cb31a5acc98a176c6e0bd6b5582584f7221d8c780affee2e958402455af2753a546d63a5c4b3dd9d8ac5ce98605f75c947d6d81dac0721f1a2aa5aa6e339a124f30a41402171ecb55e642fa980b8f24dc05a1350901b9444c89e71557fb35df8ff90c40cc0e3c4d90cb256ebffa06ca0c30d3fe750d496e4812d03a4627c6a69bce31472e6dce0aeed724a47405587d1e2a7060ccb3f573525dc174d6f34975a694d6e1f750b9792778828257db0158e4a3ad692546930b0f59bdee49e3778b7a57c0e263501174208fd5e7df1a995d24d10648c640219afbcb2e071f714ff97caddcc76af26315f1df97b12e7db092bdd49c1582820c361393646f9ca85271bd1fd69463162a1bbe221475552592e6df7e20537b23b78e27308f5d8bf215a63657774afac6dda49c7ee32731b4cf304ce8b3b81e647b13c1712bfb9211408f25c81ad34042b01ea2ca4644328b66326b205fdf428e3b8342af15b9f8c40eb3cce89d1e1937d6c01bdfa04f3b917caff443c4e0c35f51ccfac577d691a966de41ccf03f06b2042556ccf06d443966f37688b91689f2eed0f6ed2ea6632b6b69a5d4c28b815a2951bb88c7ddd9b64c38d52d44c4c0ce72f07d00e84ce793fc8a30351463df9c9ba082f9f94ab8e4c6ca9da6099753e0705b17d52320d9cb9b35259cc0477fbe51e6b5a740ab68f3a8271273e96c4e0f744d54201de39c4dae316303b8e1b5ebdaa5cd49167790ab38893be61954c219181709ea2c4af3f32d3d3f3cdef0bdfeca479382d9648c9ae51e841539ae27d192af360e11c57d74498a8acc6bfdae959b3438d73b25d36b82c04fa18748777006208bc664002cbcac70a5957dba0588a2aeba5d203f6865badceef678e76af8d723c9852a0cbe8bfca3da6c724f4ecc21604435ae028e244cecdbbb9c553f20ab2653a1d56442338e890b21a4d7ccd3f42e471974aa0fc5c67622b48ae36e01239e5449e9cb07fdfbd8a73fa937741b391a0c6f70610e153095347c11ba92fef35d3f41c4229ad7eb254a79b3833aa75ce3a745f9cb9cd7bd81f5670337c3de02d404de56c62b1317d968878f8d258089f4b99f6a462949b52fb829068b1db66e9a61e0533dafb40db1762ef52204f6e559a7de66207b14c0538ffd3fa81843e3f3382d14fdc15d1f814783ee25ef11ea4c65afa116c4bd46d599ee9bdf44860e80bcd8af86c6df9c6c1c8659904226a0fb9e381e046ce7eec2947b9dc2ce1072ec0c20a052e5983c2249e097a607d4abd6c7a69df92ead02068e1d3b34aa4f9682455b3580445b9bbe112555610d98c615bab38ee498ac123e4623f30011ee1d4f1537e2e8303b00a91bd61be90e8aa107647344dcca87d5af44e29333394325670ebc063e2cf05a1d641a5be32e70e7a7096ae1d74c8f2fbc1b90ce7f9ce37ddf051cb5cfbebc1093a7be136f6a65cedd38abbe17a3908fe1fc0d961c0a4f9dbd7221693ed9a89ead18a113ea24fe46743de5cc738d276e28d856b0336acea664b9fa02947a52e313a0f998292c249fa84c38db43955cddfafed80f69624fd119ed660ab566943e6a607970d2849c3ce77cb1a82a9e2875dd6260e247789f7cd9a8e40d40ab6ee86b607462e40c04113fbebdde68af671b399068024e9c03995c0cf116dd34de0efc1b3992bcdfdbda1161f8487077af9bbc66f9890a6a6693c53073d27a9f51d8842e5e3e41b467fc8d5c024132e3ca047ab3fd683e27a2888bad111283ba9a72a6728cc5bc1e8aed7dd964237b1e649a261e409c4256218f2995e4dbf0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+      <tags>
+        <tag>黑历史</tag>
+        <tag>存档</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -518,11 +486,43 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>碎碎言</tag>
-        <tag>存档</tag>
         <tag>黑历史</tag>
+        <tag>碎碎言</tag>
         <tag>日常</tag>
+        <tag>存档</tag>
         <tag>高中</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【旧博客】悲哀得几乎哭出来。</title>
+    <url>/2021/06/19/%E3%80%90%E6%97%A7%E5%8D%9A%E5%AE%A2%E3%80%91%E6%82%B2%E5%93%80%E5%BE%97%E5%87%A0%E4%B9%8E%E5%93%AD%E5%87%BA%E6%9D%A5%E3%80%82/</url>
+    <content><![CDATA[<p>2019-09-05</p>
+<p>悲哀得几乎哭出来。</p>
+<p>这种时候，就是会止不住地去思考呢。</p>
+<p>当时我要是勇敢些，十年前我就已经不在这个世上了。</p>
+<p>但也会庆幸那时的未下定决心，不然就不会接触到我所喜爱的事物和我所珍惜的人们。</p>
+<p>活着到底是意味着什么呢，于我而言，答案或许是我不确定什么时候就想好的死法吧。</p>
+<p>可能我就是为了那最后一瞬而存在的吧。</p>
+<p>但是又很明白实现的可能之微。</p>
+<p>我清楚地知道现在还不是死的时候。真是可笑，每次想着还不能去死的时候，竟是为了另一个去死的时候。</p>
+<p>不吝啬我的生命，我的渺小无能使我即使在死后有人为我痛惜也不会悲哀太久。几乎所有的人不都是这样吗，忘却似乎是一件非常容易的事。就算有人在他的一生中可以一直记住我，但他死后呢？我存在的证明终会全部湮灭。况且我也不值得他人去铭记。</p>
+<p>真想有人能知道我的想法啊，遇到可以交心的人，有时间去交流。虽然也不是什么深刻的思想，但那样即使是提前死去，我所想的至少还能在其他生命中暂存。啊又开始不知道如何表达自己了，语无伦次就语无伦次吧。</p>
+<p>那么那种“暂存”的意义又是什么呢，为什么我会想渴望被全部理解呢？是本能的驱使吗？好像全部又都没了意义。</p>
+<p>意义又是种什么东西呢，所有东西都必须要有意义才能存在吗。</p>
+<p>那或许我的存在就是无意义。</p>
+<p>全部世界的存在也是无意义吗。</p>
+<p>这问题的答案也是无意义。</p>
+<p>无意义就无意义吧。</p>
+<p>在达成之前，任何可能会死的情况都会使我抗拒呢。</p>
+<p>那时最强烈的想法果然还是不甘心啊。</p>
+<p>但要是真的无法达成的话，就提前去死吧。</p>
+<p>这种时候总会想到死生，也是我作为人的局限性吧。</p>
+]]></content>
+      <categories>
+        <category>被黑洞吸入的垃圾桶</category>
+      </categories>
+      <tags>
+        <tag>感慨</tag>
       </tags>
   </entry>
   <entry>
@@ -661,56 +661,6 @@
       </tags>
   </entry>
   <entry>
-    <title>反叛与正义</title>
-    <url>/2021/06/19/%E5%8F%8D%E5%8F%9B%E4%B8%8E%E6%AD%A3%E4%B9%89/</url>
-    <content><![CDATA[<p>2020-7-14</p>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>我喜欢的作品不一定我都有很深的共鸣，但是我有共鸣的作品，一定是我喜欢的。</p>
-<p>我很幸运能在这个阶段与《天气之子》邂逅，碰巧前几天去bt站下番，看到了首页千夏字幕组新出的《天气之子》，就顺便下载补了。若不是偶然碰见，这一部很可能就要拖到明年暑假或是更往后了。而无论是在去年十一月上映时还是等高中毕业解除束缚时去看，我想我喜欢是一定的，但大概率都不会如此喜欢它。我不会感到看迟了或是看早了，就是说，我认为我在最适合的时刻，接触了这部作品。“可遇而不可求”的机缘巧合。</p>
-<p>2020年7月13日，有一个少年带着昨晚刚被付诸身体暴力留下的几处瘀斑和先前遭受的无数暴力留下的心理印痕，观看了《天气之子》，差点哭出来。</p>
-<blockquote>
-<p>“我们靠自己就能走下去，所以，请不要再给我们任何东西，也不要从我们这里带走任何事物。”</p>
-</blockquote>
-<blockquote>
-<p>“为什么要妨碍我，你们什么都不知道，假装什么都不知道！”</p>
-</blockquote>
-<p>离家出走、枪支、飙车、逃脱大人的妨碍、干自己的事过自己的生活，我没有做到的事情，他们做到了，然后喊出了和我一样想喊的台词。</p>
-<p>《天气之子》成为了诚哥作品中我最喜欢的一部。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>影片最初，阳菜成为晴女升空，这部作品的“非现实”成分第一次出现。整个晴女的故事和片中各种现实中与大人们的不可能的反叛（如开枪、逃捕、与警察争斗）似乎过于偏离现实，但也许是潜意识里接受了这个设定，整个电影看下来，和多数人不一样的是，我并没有任何关于觉得它胡诌的想法，而是正相反，觉得就应该是如此才对。</p>
-<p>这是孩子们与自以为是的大人们之间的斗争。叛逆不意味着就是不正确，很多时候它是少年们执掌的正义要与“大人们”习以为常的罪恶说“不”不得不做出的行动。何谓大人？不过是小孩年龄上的长大。可笑的是在现在社会的很多大人眼中，年龄上的差距导致的一个称谓上的不同，成为了成熟与童稚、有能力与无能力、绝对真理与歪理邪说之间的唯一划分标准。“为什么？”“因为我是大人。你一个小孩能干什么？我打你是天经地义。”</p>
-<p>欣喜的是，我看到已经成年跨入“大人”之门的夏美还保留着孩子的纯真，有着真挚质朴的笑容。在帆高看到鱼的反应是可以写成文章赚钱时，她提醒说“你也要变成无聊的大人了”；驾一骑摩托车狂飙，帮助帆高逃离警察的追捕。一开始被说成是“无聊、土爆了”的吸烟喝酒为自己考虑赶走帆高的圭介，最后也动手殴打警察，选择相信童话，让帆高去天空里寻找阳菜。在三年后再见帆高时说出：</p>
-<blockquote>
-<p>“这个世界，反正本来就不正常。”</p>
-</blockquote>
-<p>影片中并没有将大人世界描绘地多么恶俗不堪，只是不算明显地有上面所说的自以为是与压迫感（如帆高第一次拜访阳菜家时两位成年女性的台词与眼神）。而圭介作为一个年少时和帆高有着相同的离家出走的经历的大人，尽管在最后站在了帆高一方，无疑也是逐渐被社会同化了的。反叛的棱角慢慢被磨平，剩下妥协与个人主义。他做错了吗？没有。只是少了那股骨子里的叛逆之气罢了。了无生气。推及整个社会，不难想象那“无聊”了。说起无聊二字， 联想起鲁迅先生的《在酒楼上》，其中描写的大人们的精神状态，也与之有着共通之处。</p>
-<p>天气与阳菜相连。如果说帆高是在有意中用出走与枪支反抗，那么阳菜便是在无意中用下雨反抗。妈妈去世，与弟弟相依为命，忍受着悲伤，靠自己的力量前行。直至被发现伪造年龄被炒鱿鱼，大人们姐弟俩无法独自生活需要监护人的判断带来干涉，心中一直竭力压抑着的悲恸决堤，于是便<strong>加剧</strong>了不停息的雨，极端的雨季。（这实际上与如今极端气候增多全球变暖海平面上升的事实相符，或许也蕴含着诚哥对环境、人类命运的担忧？）但阳菜本身对这个世界没有恶意。她接受了100%晴女的工作，即使给人们祈求阳光的代价是自己越来越变得透明，但是因为让他人露出笑容使阳菜感到开心，所以继续着工作，甚至选择成为人柱换来雨停。这是一个孩子作出的牺牲自我去奉献的决定。最后帆高将阳菜从天上拉回，东京的雨便没有停过，城市逐渐被淹没。嗯？为救一个人淹了一座城么？不，他们只是在夺回自由的权利。在强调社会奉献，以社会利益为重的今天，这个结局似乎完全与主流价值观背道而驰。可是东京被水淹真就是阳菜的错吗？阳菜成为晴女的契机是在下雨天希望明天能有好天气同母亲散步，可以知道，不息的雨不是阳菜最初<strong>带来</strong>的，它在之前就已存在。 日后老奶奶对帆高的抱歉回应道：“东京的那片地方原本就是海洋，在人为和气候的作用下慢慢变成了陆地，这只是打回原形而已。”人们没有抱怨被淹没的事实，而是去接受，开始新生活。如果最后阳菜真正消失换来天晴阻止了东京被淹，那才是不合理的，仅凭一个人便可产生如此大的效力改变一片天空的规律，未免过于荒谬。话说回来，阳菜可能存在的加剧作用，社会不无责任。一无太大的负面影响，二无直接关系，若将罪名加之两个孩子身上，未免欠妥。</p>
-<blockquote>
-<p>“比起天空，我只要阳菜！天气而已，就随它肆意而为吧！”</p>
-</blockquote>
-<p>帅气至极的台词。</p>
-<p>我很欣赏这份如此选择的勇气。</p>
-<p>别管我，去他妈的舆论指向，我对社会无害，为啥不可以声张自己的正义？</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>再来随便谈一谈其他方面。</p>
-<p>雨水、云、天空、阳光的描绘在这里就不多吹了。</p>
-<p>剧情流畅度上其实是有点问题的？作为一个电影，并没有一气呵成的连贯性。用黑屏作为场景的切换，段与段之间其实更有点在一集一集看剧的感觉。没有“诶，怎么过得这么快，看完了？”的体验，稍微有些乏力。</p>
-<p>大家说帆高与阳菜之间的情感是爱情，在我看来不过是同命相连的孩子们之间淳朴的友情。可以互相喜欢，可以成为恋人，只是说成是爱情，总感觉有了大人的味道，变得不那么青春了。</p>
-<p>之前有单独刷过天气之子的五首主题歌，当时只觉得一般，配合电影才体会妙处来。看完了再听，给每首评分都加了一颗星（笑）。</p>
-<p>听到肖爷爷的时候自动微笑www 肖爷爷的很多曲子真的适合做配乐。</p>
-<p>是你吗？姐系妹妹！帆高你这个迟钝，妹妹说自己是姐姐就信了，还依靠！</p>
-<p>呜啊凪真的可爱啊。前辈！受我一拜！也教教我吧！！orz</p>
-<p>花泽绫音可还行。</p>
-<p>骑摩托太帅啦，大姐姐带带我！和晴子一样太青春了啊！</p>
-<p><del>于是一位飙着摩托后背电贝斯手拿手枪迷倒万千女孩的帅气少女在未来诞生了</del></p>
-]]></content>
-      <categories>
-        <category>ACGN</category>
-      </categories>
-      <tags>
-        <tag>anime</tag>
-        <tag>天气之子</tag>
-        <tag>评论</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>友松先生&#39;s语录1.0</title>
     <url>/2021/06/20/%E5%8F%8B%E6%9D%BE%E5%85%88%E7%94%9F%E8%AF%AD%E5%BD%95/</url>
     <content><![CDATA[<p>初中还是按片区招生，所以班级里是鱼龙混杂（雾）。安分的那部分我们姑且称他们为好学生，暂时不提。不安分的呢，就称他们为坏学生。坏学生中有上课睡到打呼，呼噜声盖过老师教学声的；有天天向呆（就是发呆）上课从来不听的；有课上到一半摔笔摔书走人的······非要说的话我其实也算是坏学生，只是是成绩“好”的坏学生。上课时常睡觉老师也不管，若是和同学讲话，老师便会提醒和我讲话的同学：“你别和她讲话呀 ，她拉你下坑，她全会了你还不会呢。”最喜欢在窗边的那个座位上上课放好多笔在窗帘拉绳上荡秋千玩。扯远了。</p>
@@ -842,101 +792,53 @@
       </tags>
   </entry>
   <entry>
-    <title>废话①</title>
-    <url>/2021/07/12/%E5%BA%9F%E8%AF%9D%E2%91%A0/</url>
-    <content><![CDATA[<p>这是废话集的第一篇。</p>
-<p>虽然名为废话，但是我还是希望它们能有一点废话之外的作用，成为我思考的一点点痕迹——我并没有在整个人行尸走肉地活着，我还有自己的想法与感概。（当然很可能更多时候就只是一个人碎碎言真的只是废话而已（笑））</p>
-<p>性质其实很像「被黑洞吸入的垃圾桶」。区别是垃圾桶中的是负面情绪，废话集中的是中性或是正面的内容。</p>
-<hr>
-<p>很多很多的感概。</p>
-<p>想要做深度的思考，但总是沉浸在怠惰带来的短暂快乐中逃避思考。想要写好好审视自己的文章，分析自己的方方面面，将那些无病呻吟或是有病叫喊编织成盔甲磨砺为利剑，却总是一拖再拖。</p>
-<p>可笑的是写一个娱乐性质的打油文都需要好久，说着废话都需要花费好多体力。</p>
-<p>我越是长大，越是感觉自己的孩子气，越是体会到自己的渺小与无知。</p>
-<p>我到底、到底在追寻着什么？</p>
-<p>或者说，究竟是什么东西在一直束缚着我？</p>
-<p>一次又一次，当光明重现，霎那间更深邃的夜便又袭来，眈眈的黑影把我围起，它们告诉我“这就是你的命运”。写好了的，定好了的，无法出逃，挣扎还是妥协都只是死路一条。</p>
-<p>歌德说“阳光越是强烈的地方，阴影越是深邃”。没有了光，阴影也不成阴影，满是阴影的世界叫做地域。</p>
-<p>当里奥纳德的万物裂痕再无光照，我还会看见万物吗，裂痕也看不见了呢。</p>
-<p>江河吟着大地诸角落都充满光明后便无人需要星星。我想反驳不。星星才不是黑夜独有。星星何时都在，只是它们破不了云层亮不过太阳。</p>
-<p>阿多尼斯说他的伤口长出翅膀，那么我想问，当羽翼再被烧毁，是否只有坠落一条道路。</p>
-<p>我根本没有罗曼罗兰口中的英雄主义，生活的真相是什么我还没有找到。</p>
-<p>尼采有言“人的情况和树相同”，我有言“t的情况和被雷劈倒的树相同，它愈想开向高处和明亮处重新生长,它的根愈要向下,向泥土,向黑暗处,向深处,向恶。然后该死的人类拿走了被劈成两半的树干，在根的正上方搭起钢筋浇筑水泥”。</p>
-<p>我天天说着这些一看就知道是笨蛋说的没有分量没有逻辑的话，明明知道自己是笨蛋但是悲哀的是正因为自己是笨蛋所以根本没能力脱离笨蛋的死循环，成天干着只有笨蛋才会干的蠢事然后早上是笨蛋中午是笨蛋晚上是笨蛋昨天是笨蛋今天是笨蛋明天还是笨蛋日复一日年复一年从笨蛋开始以笨蛋旅经往笨蛋终结。没有营养没有深度，知识狭隘，浅尝辄止。如果身为笨蛋的我大方承认自己没有用是笨蛋的事实那还算有点作为笨蛋的最后一点良心也算有着自知之明，若是相反地满以为自己有用是天才是改变他人改变世界的天骄之子那才是更可恶更可耻更可恨。笨蛋便要有笨蛋的样子人畜无害把引起社会方案厌恶唾弃的可能降到最低才是。</p>
-<p>有人说我本来不是笨蛋，因为一直说着自己是笨蛋担心着悲剧结果到如今全部成真，愿望与忧虑同样都会在潜意识中将人们引导。可是啊，我至始至终便是笨蛋而已，不过从前是个自以为是自骄自傲不切实际的笨蛋而已。从己不知己是笨蛋到己深知己是笨蛋，这便是笨蛋的自我修养与成长。</p>
-<p>笨蛋每天的梦想便是一觉醒来发现自己再也不是笨蛋，做着无限套娃的白日梦，pongqipongqipongqi，睁眼闭眼睁眼闭眼睁眼，镜子前一站，好耶，你怎么还是笨蛋哦。</p>
-<p>淦！你怎么可以这么没用啊！</p>
-<p>我要歌颂狄德罗的名人名言，他讲“一个需要英雄的民族是可悲的民族”，然后我就要说，“一个需要英雄的人类是可笑的人类”，连他人的悲悯与同情都不值得被施舍。</p>
-<p>看吧，越写越像垃圾了，趁这篇还算是废话的时候就此停笔吧。</p>
-<p>睡觉！</p>
+    <title>反叛与正义</title>
+    <url>/2021/06/19/%E5%8F%8D%E5%8F%9B%E4%B8%8E%E6%AD%A3%E4%B9%89/</url>
+    <content><![CDATA[<p>2020-7-14</p>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>我喜欢的作品不一定我都有很深的共鸣，但是我有共鸣的作品，一定是我喜欢的。</p>
+<p>我很幸运能在这个阶段与《天气之子》邂逅，碰巧前几天去bt站下番，看到了首页千夏字幕组新出的《天气之子》，就顺便下载补了。若不是偶然碰见，这一部很可能就要拖到明年暑假或是更往后了。而无论是在去年十一月上映时还是等高中毕业解除束缚时去看，我想我喜欢是一定的，但大概率都不会如此喜欢它。我不会感到看迟了或是看早了，就是说，我认为我在最适合的时刻，接触了这部作品。“可遇而不可求”的机缘巧合。</p>
+<p>2020年7月13日，有一个少年带着昨晚刚被付诸身体暴力留下的几处瘀斑和先前遭受的无数暴力留下的心理印痕，观看了《天气之子》，差点哭出来。</p>
+<blockquote>
+<p>“我们靠自己就能走下去，所以，请不要再给我们任何东西，也不要从我们这里带走任何事物。”</p>
+</blockquote>
+<blockquote>
+<p>“为什么要妨碍我，你们什么都不知道，假装什么都不知道！”</p>
+</blockquote>
+<p>离家出走、枪支、飙车、逃脱大人的妨碍、干自己的事过自己的生活，我没有做到的事情，他们做到了，然后喊出了和我一样想喊的台词。</p>
+<p>《天气之子》成为了诚哥作品中我最喜欢的一部。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>影片最初，阳菜成为晴女升空，这部作品的“非现实”成分第一次出现。整个晴女的故事和片中各种现实中与大人们的不可能的反叛（如开枪、逃捕、与警察争斗）似乎过于偏离现实，但也许是潜意识里接受了这个设定，整个电影看下来，和多数人不一样的是，我并没有任何关于觉得它胡诌的想法，而是正相反，觉得就应该是如此才对。</p>
+<p>这是孩子们与自以为是的大人们之间的斗争。叛逆不意味着就是不正确，很多时候它是少年们执掌的正义要与“大人们”习以为常的罪恶说“不”不得不做出的行动。何谓大人？不过是小孩年龄上的长大。可笑的是在现在社会的很多大人眼中，年龄上的差距导致的一个称谓上的不同，成为了成熟与童稚、有能力与无能力、绝对真理与歪理邪说之间的唯一划分标准。“为什么？”“因为我是大人。你一个小孩能干什么？我打你是天经地义。”</p>
+<p>欣喜的是，我看到已经成年跨入“大人”之门的夏美还保留着孩子的纯真，有着真挚质朴的笑容。在帆高看到鱼的反应是可以写成文章赚钱时，她提醒说“你也要变成无聊的大人了”；驾一骑摩托车狂飙，帮助帆高逃离警察的追捕。一开始被说成是“无聊、土爆了”的吸烟喝酒为自己考虑赶走帆高的圭介，最后也动手殴打警察，选择相信童话，让帆高去天空里寻找阳菜。在三年后再见帆高时说出：</p>
+<blockquote>
+<p>“这个世界，反正本来就不正常。”</p>
+</blockquote>
+<p>影片中并没有将大人世界描绘地多么恶俗不堪，只是不算明显地有上面所说的自以为是与压迫感（如帆高第一次拜访阳菜家时两位成年女性的台词与眼神）。而圭介作为一个年少时和帆高有着相同的离家出走的经历的大人，尽管在最后站在了帆高一方，无疑也是逐渐被社会同化了的。反叛的棱角慢慢被磨平，剩下妥协与个人主义。他做错了吗？没有。只是少了那股骨子里的叛逆之气罢了。了无生气。推及整个社会，不难想象那“无聊”了。说起无聊二字， 联想起鲁迅先生的《在酒楼上》，其中描写的大人们的精神状态，也与之有着共通之处。</p>
+<p>天气与阳菜相连。如果说帆高是在有意中用出走与枪支反抗，那么阳菜便是在无意中用下雨反抗。妈妈去世，与弟弟相依为命，忍受着悲伤，靠自己的力量前行。直至被发现伪造年龄被炒鱿鱼，大人们姐弟俩无法独自生活需要监护人的判断带来干涉，心中一直竭力压抑着的悲恸决堤，于是便<strong>加剧</strong>了不停息的雨，极端的雨季。（这实际上与如今极端气候增多全球变暖海平面上升的事实相符，或许也蕴含着诚哥对环境、人类命运的担忧？）但阳菜本身对这个世界没有恶意。她接受了100%晴女的工作，即使给人们祈求阳光的代价是自己越来越变得透明，但是因为让他人露出笑容使阳菜感到开心，所以继续着工作，甚至选择成为人柱换来雨停。这是一个孩子作出的牺牲自我去奉献的决定。最后帆高将阳菜从天上拉回，东京的雨便没有停过，城市逐渐被淹没。嗯？为救一个人淹了一座城么？不，他们只是在夺回自由的权利。在强调社会奉献，以社会利益为重的今天，这个结局似乎完全与主流价值观背道而驰。可是东京被水淹真就是阳菜的错吗？阳菜成为晴女的契机是在下雨天希望明天能有好天气同母亲散步，可以知道，不息的雨不是阳菜最初<strong>带来</strong>的，它在之前就已存在。 日后老奶奶对帆高的抱歉回应道：“东京的那片地方原本就是海洋，在人为和气候的作用下慢慢变成了陆地，这只是打回原形而已。”人们没有抱怨被淹没的事实，而是去接受，开始新生活。如果最后阳菜真正消失换来天晴阻止了东京被淹，那才是不合理的，仅凭一个人便可产生如此大的效力改变一片天空的规律，未免过于荒谬。话说回来，阳菜可能存在的加剧作用，社会不无责任。一无太大的负面影响，二无直接关系，若将罪名加之两个孩子身上，未免欠妥。</p>
+<blockquote>
+<p>“比起天空，我只要阳菜！天气而已，就随它肆意而为吧！”</p>
+</blockquote>
+<p>帅气至极的台词。</p>
+<p>我很欣赏这份如此选择的勇气。</p>
+<p>别管我，去他妈的舆论指向，我对社会无害，为啥不可以声张自己的正义？</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>再来随便谈一谈其他方面。</p>
+<p>雨水、云、天空、阳光的描绘在这里就不多吹了。</p>
+<p>剧情流畅度上其实是有点问题的？作为一个电影，并没有一气呵成的连贯性。用黑屏作为场景的切换，段与段之间其实更有点在一集一集看剧的感觉。没有“诶，怎么过得这么快，看完了？”的体验，稍微有些乏力。</p>
+<p>大家说帆高与阳菜之间的情感是爱情，在我看来不过是同命相连的孩子们之间淳朴的友情。可以互相喜欢，可以成为恋人，只是说成是爱情，总感觉有了大人的味道，变得不那么青春了。</p>
+<p>之前有单独刷过天气之子的五首主题歌，当时只觉得一般，配合电影才体会妙处来。看完了再听，给每首评分都加了一颗星（笑）。</p>
+<p>听到肖爷爷的时候自动微笑www 肖爷爷的很多曲子真的适合做配乐。</p>
+<p>是你吗？姐系妹妹！帆高你这个迟钝，妹妹说自己是姐姐就信了，还依靠！</p>
+<p>呜啊凪真的可爱啊。前辈！受我一拜！也教教我吧！！orz</p>
+<p>花泽绫音可还行。</p>
+<p>骑摩托太帅啦，大姐姐带带我！和晴子一样太青春了啊！</p>
+<p><del>于是一位飙着摩托后背电贝斯手拿手枪迷倒万千女孩的帅气少女在未来诞生了</del></p>
 ]]></content>
       <categories>
-        <category>生活</category>
-        <category>废话集</category>
+        <category>ACGN</category>
       </categories>
       <tags>
-        <tag>碎碎言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>摸鱼笔记①</title>
-    <url>/2021/07/05/%E6%91%B8%E9%B1%BC%E7%AC%94%E8%AE%B0%E2%91%A0/</url>
-    <content><![CDATA[<p>如果你要和我说什么人生的意义在于摸鱼，那一定不是这样的。</p>
-<p>我现在虽然在这样说着话，但实际上我也不知道我到底在说些什么。</p>
-<p>啊。</p>
-<p>这就是摸鱼人生！</p>
-<p>不妨来猜猜看我现在的摸鱼姿势。</p>
-<p>是 什 么 呢？</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>耶！一定没有猜到w</p>
-<p>我现在头枕着枕头，双脚放在墙上，腿与床约成60°角，笔记本约成115°角打开，支点在小腹和大腿上。</p>
-<p>啊啊啊，想念我的床上桌。</p>
-<p>这个姿势眼睛只能用镜片的50度下端，其实是不怎么看得清的呜呜。脖子也有点累。</p>
-<p>有没有可以躺在床上把笔记本固定到头上方的仪器。</p>
-<p>唔…胸口碎大石的是神仙吗，我现在把电脑转移到胸前已经感觉要被压死了。</p>
-<p>呜呜呜有没有什么快乐不费力的摸鱼姿势。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>摸鱼笔记</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
+        <tag>anime</tag>
+        <tag>天气之子</tag>
+        <tag>评论</tag>
       </tags>
   </entry>
   <entry>
@@ -1038,10 +940,108 @@
         <category>生活</category>
       </categories>
       <tags>
-        <tag>存档</tag>
         <tag>日常</tag>
         <tag>日记</tag>
+        <tag>存档</tag>
         <tag>幼儿园</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>废话①</title>
+    <url>/2021/07/12/%E5%BA%9F%E8%AF%9D%E2%91%A0/</url>
+    <content><![CDATA[<p>这是废话集的第一篇。</p>
+<p>虽然名为废话，但是我还是希望它们能有一点废话之外的作用，成为我思考的一点点痕迹——我并没有在整个人行尸走肉地活着，我还有自己的想法与感概。（当然很可能更多时候就只是一个人碎碎言真的只是废话而已（笑））</p>
+<p>性质其实很像「被黑洞吸入的垃圾桶」。区别是垃圾桶中的是负面情绪，废话集中的是中性或是正面的内容。</p>
+<hr>
+<p>很多很多的感概。</p>
+<p>想要做深度的思考，但总是沉浸在怠惰带来的短暂快乐中逃避思考。想要写好好审视自己的文章，分析自己的方方面面，将那些无病呻吟或是有病叫喊编织成盔甲磨砺为利剑，却总是一拖再拖。</p>
+<p>可笑的是写一个娱乐性质的打油文都需要好久，说着废话都需要花费好多体力。</p>
+<p>我越是长大，越是感觉自己的孩子气，越是体会到自己的渺小与无知。</p>
+<p>我到底、到底在追寻着什么？</p>
+<p>或者说，究竟是什么东西在一直束缚着我？</p>
+<p>一次又一次，当光明重现，霎那间更深邃的夜便又袭来，眈眈的黑影把我围起，它们告诉我“这就是你的命运”。写好了的，定好了的，无法出逃，挣扎还是妥协都只是死路一条。</p>
+<p>歌德说“阳光越是强烈的地方，阴影越是深邃”。没有了光，阴影也不成阴影，满是阴影的世界叫做地域。</p>
+<p>当里奥纳德的万物裂痕再无光照，我还会看见万物吗，裂痕也看不见了呢。</p>
+<p>江河吟着大地诸角落都充满光明后便无人需要星星。我想反驳不。星星才不是黑夜独有。星星何时都在，只是它们破不了云层亮不过太阳。</p>
+<p>阿多尼斯说他的伤口长出翅膀，那么我想问，当羽翼再被烧毁，是否只有坠落一条道路。</p>
+<p>我根本没有罗曼罗兰口中的英雄主义，生活的真相是什么我还没有找到。</p>
+<p>尼采有言“人的情况和树相同”，我有言“t的情况和被雷劈倒的树相同，它愈想开向高处和明亮处重新生长,它的根愈要向下,向泥土,向黑暗处,向深处,向恶。然后该死的人类拿走了被劈成两半的树干，在根的正上方搭起钢筋浇筑水泥”。</p>
+<p>我天天说着这些一看就知道是笨蛋说的没有分量没有逻辑的话，明明知道自己是笨蛋但是悲哀的是正因为自己是笨蛋所以根本没能力脱离笨蛋的死循环，成天干着只有笨蛋才会干的蠢事然后早上是笨蛋中午是笨蛋晚上是笨蛋昨天是笨蛋今天是笨蛋明天还是笨蛋日复一日年复一年从笨蛋开始以笨蛋旅经往笨蛋终结。没有营养没有深度，知识狭隘，浅尝辄止。如果身为笨蛋的我大方承认自己没有用是笨蛋的事实那还算有点作为笨蛋的最后一点良心也算有着自知之明，若是相反地满以为自己有用是天才是改变他人改变世界的天骄之子那才是更可恶更可耻更可恨。笨蛋便要有笨蛋的样子人畜无害把引起社会方案厌恶唾弃的可能降到最低才是。</p>
+<p>有人说我本来不是笨蛋，因为一直说着自己是笨蛋担心着悲剧结果到如今全部成真，愿望与忧虑同样都会在潜意识中将人们引导。可是啊，我至始至终便是笨蛋而已，不过从前是个自以为是自骄自傲不切实际的笨蛋而已。从己不知己是笨蛋到己深知己是笨蛋，这便是笨蛋的自我修养与成长。</p>
+<p>笨蛋每天的梦想便是一觉醒来发现自己再也不是笨蛋，做着无限套娃的白日梦，pongqipongqipongqi，睁眼闭眼睁眼闭眼睁眼，镜子前一站，好耶，你怎么还是笨蛋哦。</p>
+<p>淦！你怎么可以这么没用啊！</p>
+<p>我要歌颂狄德罗的名人名言，他讲“一个需要英雄的民族是可悲的民族”，然后我就要说，“一个需要英雄的人类是可笑的人类”，连他人的悲悯与同情都不值得被施舍。</p>
+<p>看吧，越写越像垃圾了，趁这篇还算是废话的时候就此停笔吧。</p>
+<p>睡觉！</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>废话集</category>
+      </categories>
+      <tags>
+        <tag>碎碎言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>摸鱼笔记①</title>
+    <url>/2021/07/05/%E6%91%B8%E9%B1%BC%E7%AC%94%E8%AE%B0%E2%91%A0/</url>
+    <content><![CDATA[<p>如果你要和我说什么人生的意义在于摸鱼，那一定不是这样的。</p>
+<p>我现在虽然在这样说着话，但实际上我也不知道我到底在说些什么。</p>
+<p>啊。</p>
+<p>这就是摸鱼人生！</p>
+<p>不妨来猜猜看我现在的摸鱼姿势。</p>
+<p>是 什 么 呢？</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>耶！一定没有猜到w</p>
+<p>我现在头枕着枕头，双脚放在墙上，腿与床约成60°角，笔记本约成115°角打开，支点在小腹和大腿上。</p>
+<p>啊啊啊，想念我的床上桌。</p>
+<p>这个姿势眼睛只能用镜片的50度下端，其实是不怎么看得清的呜呜。脖子也有点累。</p>
+<p>有没有可以躺在床上把笔记本固定到头上方的仪器。</p>
+<p>唔…胸口碎大石的是神仙吗，我现在把电脑转移到胸前已经感觉要被压死了。</p>
+<p>呜呜呜有没有什么快乐不费力的摸鱼姿势。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>摸鱼笔记</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -1420,10 +1420,10 @@
         <category>被黑洞吸入的垃圾桶</category>
       </categories>
       <tags>
-        <tag>存档</tag>
-        <tag>感慨</tag>
         <tag>日常</tag>
+        <tag>存档</tag>
         <tag>高中</tag>
+        <tag>感慨</tag>
         <tag>高考</tag>
       </tags>
   </entry>
@@ -1797,8 +1797,8 @@
         <category>中二脑洞产物</category>
       </categories>
       <tags>
-        <tag>存档</tag>
         <tag>黑历史</tag>
+        <tag>存档</tag>
         <tag>演绎</tag>
       </tags>
   </entry>
