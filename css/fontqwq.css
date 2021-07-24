@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+@font-face{
+    font-family: 'LinotypeTypentypo.OTF';
+    src: url('/font/LinotypeTypentypo.OTF');
+    font-display: swap;   
+     
+}
+@font-face{
+    font-family: 'FZZXHJW.TTF';
+    src: url('/font/FZZXHJW.TTF');
+    font-display: swap;   
+     
+}
+@font-face{
+    font-family: 'FZZZHONGJW.TTF';
+    src: url('/font/FZZZHONGJW.TTF');
+    font-display: swap;   
+     
+}
+@font-face{
+    font-family: 'consola-1.ttf';
+    src: url('/font/consola-1.ttf');
+    font-display: swap;      
+}
+
+
+/*网页标题*/
+h1#site-title{
+    font-family: 'LinotypeTypentypo.OTF', serif;
+}
+/*网页副标题*/
+span#subtitle{
+    font-family: 'Rock Salt', cursive;
+}
+
+/*多级标题*/
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'FZZZHONGJW.TTF', serif;
+}
+
+/*正文内容*/
+p {
+    font-family: 'FZZXHJW.TTF', serif; 
+    font-size: 16px;
+    line-height: 28px;
+}
+li{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+del{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+/*导航*/
+span{
+    font-family: 'Lacquer', cursive;
+}    
+
+/*左上标*/
+a#site-name{
+    font-family: 'Lacquer', cursive;
+}
+
+/*个人简介*/
+div.author-info__name{
+    font-family: 'Rock Salt', cursive;
+}
+div.author-info__description{
+    font-family:  'Lacquer', cursive;
+}
+div.length-num{
+    font-family:  'Lacquer', cursive;
+}
+div.headline{
+    font-family:  'Lacquer', cursive;
+}
+
+/*底部版权*/
+div.copyright{
+    font-family: 'Rock Salt', cursive;
+}
+/*首页文章内容*/
+div.content{
+    font-family: 'FZZXHJW.TTF', serif; 
+    font-size: 15px !important;
+}
+
+
+/*底部介绍*/
+div.footer_custom_text{
+    font-family: 'Rock Salt', cursive;
+}
+/*侧边介绍栏*/
+
+
+/*首页文章标题*/
+a.article-title{
+    font-family: 'FZZZHONGJW.TTF', serif;
+}
+/*info栏*/
+div.item-name{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+/**/ 
+a{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+/**/
+div.announcement_content{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+ 
+div.card-category-list-name{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+/*代码*/
+span.line{
+    font-family: 'consola-1.ttf', serif;
+}
+/*目录*/
+a.toc-link{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.toc-text{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.toc-number{
+    font-family: 'Lacquer', cursive;
+}
+span.card-category-list-name{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+/*计数*/
+div.item-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div.item-quantifier{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div#runtimeshow.item-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div#busuanzi_value_site_pv.item-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div#busuanzi_value_site_uv.item-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div#last-push-date.item-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+}
+
+
+/*archive*/
+div.article-sort-title{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div.article-sort-item year{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.card-archive-list-date{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.card-archive-list-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+/*tag*/
+div.tag-cloud-title.is-center{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.tag-cloud-amount{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+/*comment*/
+div.vwrap{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div.vempty{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+a.comment{
+    font-size: 14px !important;
+}
+span.vnick{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.vsys{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.vtime{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.vat{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+/*link*/
+div.flink-desc{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+
+span.card-category-list-count{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+/*category*/
+#text{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+div.category-title.is-center{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+span.hide-content
+{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+
+button.hide-button.button--animated{
+    font-family: 'FZZXHJW.TTF', serif;
+}
