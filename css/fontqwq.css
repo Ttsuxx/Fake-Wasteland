@@ -49,6 +49,8 @@ p {
 }
 li{
     font-family: 'FZZXHJW.TTF', serif;
+    font-size: 16px;
+    line-height: 28px;
 }
 del{
     font-family: 'FZZXHJW.TTF', serif;
@@ -219,11 +221,12 @@ div.category-title.is-center{
     font-family: 'FZZXHJW.TTF', serif;
 }
 
-span.hide-content
-{
+span.hide-content{
     font-family: 'FZZXHJW.TTF', serif;
+    font-size: 16px;
 }
 
 button.hide-button.button--animated{
     font-family: 'FZZXHJW.TTF', serif;
+    font-size: 16px;
 }
