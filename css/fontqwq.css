@@ -230,3 +230,13 @@ button.hide-button.button--animated{
     font-family: 'FZZXHJW.TTF', serif;
     font-size: 16px !important;
 }
+/*search*/
+div#local-search-title.search-dialog__title{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+span.search-keyword{
+    font-family: 'FZZXHJW.TTF', serif;
+}
+input.local-search-box--input{
+    font-family: 'FZZXHJW.TTF', serif;
+}
