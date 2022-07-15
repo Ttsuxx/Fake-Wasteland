@@ -211,8 +211,7 @@ span.vat{
 
 /*link*/
 div.flink-desc{
-    font-family: 'FZZXHJW.TTF', serif;
-    font-family: '蒙纳繁幼圆.otf', serif;
+    font-family: 'FZZXHJW.TTF', '蒙纳繁幼圆.otf', serif; 
 }
 
 
