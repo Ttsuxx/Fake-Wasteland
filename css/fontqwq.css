@@ -25,6 +25,11 @@
     src: url('/font/consola-1.ttf');
     font-display: swap;      
 }
+@font-face{
+    font-family: '蒙纳繁幼圆.otf';
+    src: url('/font/蒙纳繁幼圆.otf');
+    font-display: swap;      
+}
 
 
 /*网页标题*/
@@ -43,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /*正文内容*/
 p {
-    font-family: 'FZZXHJW.TTF', serif; 
+    font-family: 'FZZXHJW.TTF', '蒙纳繁幼圆.otf', serif; 
     font-size: 16px;
     line-height: 28px;
 }
@@ -109,7 +114,8 @@ div.item-name{
 
 /**/ 
 a{
-    font-family: 'FZZXHJW.TTF', serif;
+    font-family: 'FZZXHJW.TTF', '蒙纳繁幼圆.otf', serif;
+    
 }
 /**/
 div.announcement_content{
@@ -156,7 +162,7 @@ div#last-push-date.item-count{
     font-family: 'FZZXHJW.TTF', serif;
 }
 
-}
+
 
 
 /*archive*/
@@ -206,6 +212,7 @@ span.vat{
 /*link*/
 div.flink-desc{
     font-family: 'FZZXHJW.TTF', serif;
+    font-family: '蒙纳繁幼圆.otf', serif;
 }
 
 
